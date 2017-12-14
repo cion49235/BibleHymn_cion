@@ -1,0 +1,931 @@
+<resources>
+    <!--인트로-->
+    <string name="txt_input_kkk">"kkk.db"</string>
+	<string name="txt_input_kbb">"kbb.db"</string>
+	<string name="txt_input_kjv">"kjv.db"</string>
+    <string name="txt_folder_path">"/data/data/shalom.bible.hymn.cion/databases"</string>
+    <string name="txt_kkk_path">"/data/data/shalom.bible.hymn.cion/databases/kkk.db"</string>
+	<string name="txt_kbb_path">"/data/data/shalom.bible.hymn.cion/databases/kbb.db"</string>
+	<string name="txt_kjv_path">"/data/data/shalom.bible.hymn.cion/databases/kjv.db"</string>
+	<!--인트로 -->
+	
+	<!--탭메뉴-->
+	<string name="tab_menu_0">"구약"</string>
+	<string name="tab_menu_1">"신약"</string>
+    <string name="tab_menu_2">"구찬송"</string>
+    <string name="tab_menu_3">"새찬송"</string>
+    <string name="tab_menu_4">"사전"</string>
+    <string name="tab_menu_5">"노트"</string>
+    <string name="tab_menu_6">"기도문"</string>
+    <string name="tab_menu_7">"설교"</string>
+    <string name="tab_menu_8">"CCM"</string>
+    <!--탭메뉴 -->
+	
+	<!--찬송가 -->
+    <string name="app_name">샬롬 바이블</string>
+    <string name="app_name_short">성경</string>
+    <string name="txt_edit_hint">"검색어를 입력 해 주세요."</string>
+    <string name="txt_no_data">"검색된 데이터 목록이 없습니다"</string>
+    <string name="txt_song_nodata">"데이터 연결상태가 좋지않습니다\n연결상태 확인후 다시 시도해주세요"</string>
+    <string name="txt_hymn_ready">"준비중...."</string>
+    <string name="txt_hymn_ready2">"오른쪽 하단 플레이 버튼 을 누르시면 연주됩니다"</string>
+    <string name="txt_hymn_toast">"두 손가락으로 화면을\n모으거나 벌리세요\n확대/축소 비율조절"</string>
+    <string name="txt_hymnsong_url_old">"62C47DBC60A9D1D28293D3DA1CDBB45F3D680611C5706AD69F0EB0E68772D5C72D375E4C86C07C5D83BD372BC1CB4258"</string>
+    <string name="txt_hymnsong_url_new">"62C47DBC60A9D1D28293D3DA1CDBB45F3D680611C5706AD69F0EB0E68772D5C77190A1F3AC2151E1ABACA87265891915"</string>
+    <string name="txt_hymnlyrics_url_old">"62C47DBC60A9D1D28293D3DA1CDBB45F3D680611C5706AD69F0EB0E68772D5C7D3ACA9FF73EA06F5400EE953C3341114"</string>
+	<string name="txt_hymnlyrics_url_new">"62C47DBC60A9D1D28293D3DA1CDBB45F3D680611C5706AD69F0EB0E68772D5C7D8C9F1109A16D32A77445A0BBBB2353C"</string>
+    <string name="txt_hymn_type">".mp3"</string>
+    <string name="txt_back">"'뒤로'버튼을 한번 더  누르시면 종료됩니다."</string>
+    <string name="txt_after_ad">"서버운용을 위해 광고 후 종료됩니다! 불편을드려 죄송합니다!"</string>
+    <string name="txt_play_next_cancel">더이상 연주할 목록이 없습니다.</string>
+    <string name="txt_background_play">백그라운드에서 계속 연주됩니다</string>
+    <string name="txt_hymn_continue_true">"연속으로 이어서 연주됩니다"</string>
+    <string name="txt_hymn_continue_false">"한곡만 연주됩니다"</string>
+    <!--찬송가 -->
+    
+    <!--설정 -->
+    <string name="txt_setting_alert_title">설정</string>
+    <string name="txt_setting_alert0">성경1선택</string>
+    <string name="txt_setting_alert1">성경2선택</string>
+    <string name="txt_setting_alert2">읽기 속도</string>
+    <string name="txt_setting_alert3">글자 색상</string>
+    <string name="txt_setting_alert4">배경 색상</string>
+    <string name="txt_setting_alert5">성경 검색</string>
+    <string name="txt_setting_alert6">문의 하기</string>
+    <string name="txt_setting_alert7">후원 하기</string>
+    <string name="txt_setting_alert8">이앱 전도</string>
+    <string name="txt_setting_alert9">기도 하기</string>
+    <string name="txt_setting_alert10">노트 작성</string>
+    <string name="txt_setting_alert11">스크롤이동</string>
+    <string name="txt_setting_alert12">스크롤속도</string>
+    <string name="alert_msg_swipe">"탭이동시 좌우로 스크롤이동모드 를 켜거나 끄실수있습니다"</string>
+    <string name="toast_msg_swipe">"설정되었습니다. 앱 종료 후 다음실행 후 부터 반영됩니다"</string>
+    <string name="intent_app_share">"공유하기"</string>
+    <string name="app_share_link">"https://play.google.com/store/apps/details?id=shalom.bible.hymn.cion"</string>
+    <string name="toast_ad">"서버운용을 위한 무료광고 후원이니 안심하셔도 됩니다 광고를 시청해주셔서 감사합니다"</string>
+    <!--설정 -->
+    
+    <!--성경선택-->
+    <string name="txt_bible_list_none">없음</string>
+    <string name="txt_bible_list1">개역개정판</string>
+    <string name="txt_bible_list2">개역한글판</string>
+    <string name="txt_bible_list3">KingJamesBible</string>
+    <string name="txt_bible_list4">日本語 新改譯</string>
+    <string name="txt_bible_list5">中文 K J V 上帝版繁體</string>
+    <string name="txt_bible_list6">FrenchDarby</string>
+    <string name="txt_bible_list7">GermanLuther</string>
+    <string name="txt_bible_list8">Greek Bible</string>
+    <string name="txt_bible_list9">IndonesianBaru</string>
+    <string name="txt_bible_list10">Portugal</string>
+    <string name="txt_bible_list11">RussianSynodal</string>
+    
+    <string name="txt_bible_list12">ALBANIAN</string>
+    <string name="txt_bible_list13">ASV</string>
+    <string name="txt_bible_list14">Arabic VanDyke Smith</string>
+    <string name="txt_bible_list15">바른성경</string>
+    <string name="txt_bible_list16">中文 和合 本繁體</string>
+    <string name="txt_bible_list17">中文 和合 本简体</string>
+    <string name="txt_bible_list18">中文 新译 本繁體</string>
+    <string name="txt_bible_list19">中文 K J V 神版简体</string>
+    <string name="txt_bible_list20">中文 K J V 上帝版简体</string>
+    <string name="txt_bible_list21">中文 K J V 神版繁體</string>
+    <string name="txt_bible_list22">Hebrew Stuttgartensia</string>
+    <string name="txt_bible_list23">Hebrew 1976 Modern</string>
+    <string name="txt_bible_list24">Hebrew WLC</string>
+    <string name="txt_bible_list25">IndianHindi</string>
+    <string name="txt_bible_list26">Indian Tamil</string>
+    <string name="txt_bible_list27">日本語 口語譯</string>
+    <string name="txt_bible_list28">ReinaValera1960</string>
+    <string name="txt_bible_list29">Tagalog</string>
+    <string name="txt_bible_list30">Turkish</string>
+    <string name="txt_bible_list31">WEB</string>
+    <!--성경선택 -->
+    
+    <!--성경DB -->
+	<string name="txt_input_jpnnew">"jpnnew.db"</string>
+	<string name="txt_input_ckb">"ckb.db"</string>
+	<string name="txt_input_frenchdarby">"frenchdarby.db"</string>
+	<string name="txt_input_germanluther">"germanluther.db"</string>
+	<string name="txt_input_gst">"gst.db"</string>
+	<string name="txt_input_indonesianbaru">"indonesianbaru.db"</string>
+	<string name="txt_input_portugal">"portugal.db"</string>
+	<string name="txt_input_russiansynodal">"russiansynodal.db"</string>
+	<string name="txt_input_alb">"alb.db"</string>
+	<string name="txt_input_asv">"asv.db"</string>
+	<string name="txt_input_avs">"avs.db"</string>
+	<string name="txt_input_barun">"barun.db"</string>
+	<string name="txt_input_chb">"chb.db"</string>
+	<string name="txt_input_chg">"chg.db"</string>
+	<string name="txt_input_cjb">"cjb.db"</string>
+	<string name="txt_input_ckc">"ckc.db"</string>
+	<string name="txt_input_ckg">"ckg.db"</string>
+	<string name="txt_input_cks">"cks.db"</string>
+	<string name="txt_input_hebbhs">"hebbhs.db"</string>
+	<string name="txt_input_hebmod">"hebmod.db"</string>
+	<string name="txt_input_hebwlc">"hebwlc.db"</string>
+	<string name="txt_input_indianhindi">"indianhindi.db"</string>
+	<string name="txt_input_indiantamil">"indiantamil.db"</string>
+	<string name="txt_input_jpnold">"jpnold.db"</string>
+	<string name="txt_input_reina">"reina.db"</string>
+	<string name="txt_input_tagalog">"tagalog.db"</string>
+	<string name="txt_input_tkh">"tkh.db"</string>
+	<string name="txt_input_web">"web.db"</string>
+	
+	<string name="txt_jpnnew_path">"/data/data/shalom.bible.hymn.cion/databases/jpnnew.db"</string>
+	<string name="txt_ckb_path">"/data/data/shalom.bible.hymn.cion/databases/ckb.db"</string>
+	<string name="txt_frenchdarby_path">"/data/data/shalom.bible.hymn.cion/databases/frenchdarby.db"</string>
+	<string name="txt_germanluther_path">"/data/data/shalom.bible.hymn.cion/databases/germanluther.db"</string>
+	<string name="txt_gst_path">"/data/data/shalom.bible.hymn.cion/databases/gst.db"</string>
+	<string name="txt_indonesianbaru_path">"/data/data/shalom.bible.hymn.cion/databases/indonesianbaru.db"</string>
+	<string name="txt_portugal_path">"/data/data/shalom.bible.hymn.cion/databases/portugal.db"</string>
+	<string name="txt_russiansynodal_path">"/data/data/shalom.bible.hymn.cion/databases/russiansynodal.db"</string>
+	<string name="txt_alb_path">"/data/data/shalom.bible.hymn.cion/databases/alb.db"</string>
+	<string name="txt_asv_path">"/data/data/shalom.bible.hymn.cion/databases/asv.db"</string>
+	<string name="txt_avs_path">"/data/data/shalom.bible.hymn.cion/databases/avs.db"</string>
+	<string name="txt_barun_path">"/data/data/shalom.bible.hymn.cion/databases/barun.db"</string>
+	<string name="txt_chb_path">"/data/data/shalom.bible.hymn.cion/databases/chb.db"</string>
+	<string name="txt_chg_path">"/data/data/shalom.bible.hymn.cion/databases/chg.db"</string>
+	<string name="txt_cjb_path">"/data/data/shalom.bible.hymn.cion/databases/cjb.db"</string>
+	<string name="txt_ckc_path">"/data/data/shalom.bible.hymn.cion/databases/ckc.db"</string>
+	<string name="txt_ckg_path">"/data/data/shalom.bible.hymn.cion/databases/ckg.db"</string>
+	<string name="txt_cks_path">"/data/data/shalom.bible.hymn.cion/databases/cks.db"</string>
+	<string name="txt_hebbhs_path">"/data/data/shalom.bible.hymn.cion/databases/hebbhs.db"</string>
+	<string name="txt_hebmod_path">"/data/data/shalom.bible.hymn.cion/databases/hebmod.db"</string>
+	<string name="txt_hebwlc_path">"/data/data/shalom.bible.hymn.cion/databases/hebwlc.db"</string>
+	<string name="txt_indianhindi_path">"/data/data/shalom.bible.hymn.cion/databases/indianhindi.db"</string>
+	<string name="txt_indiantamil_path">"/data/data/shalom.bible.hymn.cion/databases/indiantamil.db"</string>
+	<string name="txt_jpnold_path">"/data/data/shalom.bible.hymn.cion/databases/jpnold.db"</string>
+	<string name="txt_reina_path">"/data/data/shalom.bible.hymn.cion/databases/reina.db"</string>
+	<string name="txt_tagalog_path">"/data/data/shalom.bible.hymn.cion/databases/tagalog.db"</string>
+	<string name="txt_tkh_path">"/data/data/shalom.bible.hymn.cion/databases/tkh.db"</string>
+	<string name="txt_web_path">"/data/data/shalom.bible.hymn.cion/databases/web.db"</string>
+    <!--성경DB -->
+    
+    <!--메뉴하단 -->
+    <string name="txt_menu_bottom1">축소</string>
+    <string name="txt_menu_bottom2">확대</string>
+    <string name="txt_menu_bottom3">스크롤</string>
+    <string name="txt_menu_bottom4">이전</string>
+    <string name="txt_menu_bottom5">다음</string>
+    <string name="txt_menu_bottom6">설정</string>
+    <string name="txt_menu_bottom7">후원</string>
+    <string name="txt_menu_bottom8">검색</string>
+    <string name="txt_menu_bottom9">책갈피</string>
+    <!--메뉴하단 -->
+    
+    <!--오디오속도 -->
+    <string name="txt_audiospeed_after">"오디오 정지 후 선택해주세요"</string>
+    <string name="txt_audiospeed_list1">"일반"</string>
+    <string name="txt_audiospeed_list2">"속독"</string>
+    <!--오디오속도 -->
+    
+    <!--Swipe Mode -->
+    <string name="txt_swipemode_list1">"켜기"</string>
+    <string name="txt_swipemode_list2">"끄기"</string>
+    <!--Swipe Mode -->
+    
+   <!--스크롤 속도 -->
+   <string name="txt_scroll_speed_1">"1x"</string>
+   <string name="txt_scroll_speed_2">"2x"</string>
+   <string name="txt_scroll_speed_3">"3x"</string>
+   <!--스크롤 속도 -->
+    
+    <!--성경순서-->
+    <string name="txt_jang">"장"</string>
+    <string name="txt_jul">"절"</string>
+    <string name="txt_bt_kwon1">"구약"</string>
+	<string name="txt_bt_kwon2">"신약"</string>  
+	
+    <string name="txt_kwon_kbb1">"창세기"</string>
+	<string name="txt_kwon_kbb2">"출애굽기"</string>
+	<string name="txt_kwon_kbb3">"레위기"</string>
+	<string name="txt_kwon_kbb4">"민수기"</string>
+	<string name="txt_kwon_kbb5">"신명기"</string>
+	<string name="txt_kwon_kbb6">"여호수아"</string>
+	<string name="txt_kwon_kbb7">"사사기"</string>
+	<string name="txt_kwon_kbb8">"룻기"</string>
+	<string name="txt_kwon_kbb9">"사무엘상"</string>
+	<string name="txt_kwon_kbb10">"사무엘하"</string>
+	<string name="txt_kwon_kbb11">"열왕기상"</string>
+	<string name="txt_kwon_kbb12">"열왕기하"</string>
+	<string name="txt_kwon_kbb13">"역대상"</string>
+	<string name="txt_kwon_kbb14">"역대하"</string>
+	<string name="txt_kwon_kbb15">"에스라"</string>
+	<string name="txt_kwon_kbb16">"느헤미야"</string>
+	<string name="txt_kwon_kbb17">"에스더"</string>
+	<string name="txt_kwon_kbb18">"욥기"</string>
+	<string name="txt_kwon_kbb19">"시편"</string>
+	<string name="txt_kwon_kbb20">"잠언"</string>
+	<string name="txt_kwon_kbb21">"전도서"</string>
+	<string name="txt_kwon_kbb22">"아가"</string>
+	<string name="txt_kwon_kbb23">"이사야"</string>
+	<string name="txt_kwon_kbb24">"예레미야 "</string>
+	<string name="txt_kwon_kbb25">"예레미야애가"</string>
+	<string name="txt_kwon_kbb26">"에스겔"</string>
+	<string name="txt_kwon_kbb27">"다니엘"</string>
+	<string name="txt_kwon_kbb28">"호세아"</string>
+	<string name="txt_kwon_kbb29">"요엘"</string>
+	<string name="txt_kwon_kbb30">"아모스"</string>
+	<string name="txt_kwon_kbb31">"오바댜"</string>
+	<string name="txt_kwon_kbb32">"요나"</string>
+	<string name="txt_kwon_kbb33">"미가"</string>
+	<string name="txt_kwon_kbb34">"나훔"</string>
+	<string name="txt_kwon_kbb35">"하박국"</string>
+	<string name="txt_kwon_kbb36">"스바냐"</string>
+	<string name="txt_kwon_kbb37">"학개"</string>
+	<string name="txt_kwon_kbb38">"스가랴"</string>
+	<string name="txt_kwon_kbb39">"말라기"</string>
+	
+	<string name="txt_kwon_kbb40">"마태복음"</string>
+	<string name="txt_kwon_kbb41">"마가복음"</string>
+	<string name="txt_kwon_kbb42">"누가복음"</string>
+	<string name="txt_kwon_kbb43">"요한복음"</string>
+	<string name="txt_kwon_kbb44">"사도행전"</string>
+	<string name="txt_kwon_kbb45">"로마서"</string>
+	<string name="txt_kwon_kbb46">"고린도전서"</string>
+	<string name="txt_kwon_kbb47">"고린도후서"</string>
+	<string name="txt_kwon_kbb48">"갈라디아서"</string>
+	<string name="txt_kwon_kbb49">"에베소서"</string>
+	<string name="txt_kwon_kbb50">"빌립보서"</string>
+	<string name="txt_kwon_kbb51">"골로새서"</string>
+	<string name="txt_kwon_kbb52">"데살로니가전서"</string>
+	<string name="txt_kwon_kbb53">"데살로니가후서"</string>
+	<string name="txt_kwon_kbb54">"디모데전서"</string>
+	<string name="txt_kwon_kbb55">"디모데후서"</string>
+	<string name="txt_kwon_kbb56">"디도서"</string>
+	<string name="txt_kwon_kbb57">"빌레몬서"</string>
+	<string name="txt_kwon_kbb58">"히브리서"</string>
+	<string name="txt_kwon_kbb59">"야고보서"</string>
+	<string name="txt_kwon_kbb60">"베드로전서"</string>
+	<string name="txt_kwon_kbb61">"베드로후서"</string>
+	<string name="txt_kwon_kbb62">"요한일서"</string>
+	<string name="txt_kwon_kbb63">"요한이서"</string>
+	<string name="txt_kwon_kbb64">"요한삼서"</string>
+	<string name="txt_kwon_kbb65">"유다서"</string>
+	<string name="txt_kwon_kbb66">"요한계시록"</string>
+	<!--성경순서-->
+	
+	<!--Fragment_OldBible-->
+	<string name="frg_old_bible_1">더이상 페이지가 없습니다.</string>
+	<string name="frg_action_menu_1_1">전체선택</string>
+    <string name="frg_action_menu_1_2">선택해제</string>
+    <string name="frg_action_menu_2">노트추가</string>
+    <string name="frg_action_menu_3">공유하기</string>
+    <string name="frg_toast_note_1">기도노트에 추가되었습니다.</string>
+    <string name="frg_toast_note_2">이미 추가된 항목입니다.</string>
+    <string name="frg_intent_share">"공유하기"</string>
+    <string name="frg_toast_bible_text_color_1">"변경완료"</string>
+	<string name="frg_toast_bible_text_color_2">"취소"</string>
+	<string name="frg_toast_bible_bg_color_1">"변경완료"</string>
+	<string name="frg_toast_bible_bg_color_2">"취소"</string>
+    <string name="download_data_connection_ment">데이터 연결상태 확인 후 다시시도해주세요</string>
+    <string name="download_db_url">"62C47DBC60A9D1D28293D3DA1CDBB45F481EFC903BBF5C552DB99AFCEE3739511C1CE01E86FB28FE6379AD09D329D55A"</string>
+    <string name="download_cancel_ment">취소</string>
+    <string name="downloading_ment">"다운로드.."</string>
+    <string name="downloading_complete">다운로드 완료</string>
+    <string name="downloading_db_apply_ment">새로운 성경을 적용하시겠습니까?</string>
+    <string name="downloading_db_apply">적용</string>
+    <string name="download_db_apply_complete">적용완료</string>
+    <string name="download_db_write_fail">적용 실패하였습니다 다시시도해 주세요</string>
+    <string name="downloading_db_cancle">취소</string>
+    <string name="path_folder">"/Shalom_Bible/"</string>
+    <string name="permission_ment">"성경데이터 다운로드를 위해서는 휴대기기 설정-앱 권한-저장공간-허용 되어야 적용됨을 알려드립니다."</string>
+    <string name="permission_cancel">"'거부'할 경우 새로운 성경데이터를 적용할수 없습니다."</string>
+	<string name="voicedata_url">"62C47DBC60A9D1D28293D3DA1CDBB45F481EFC903BBF5C552DB99AFCEE37395141D742FBD17ACE2F91D96F501BF177D8"</string>
+    <string name="voicedata_url2">"62C47DBC60A9D1D28293D3DA1CDBB45F481EFC903BBF5C552DB99AFCEE3739518CCD1459A3B423020D603D468C2E3B7C"</string>
+    <string name="voicedata_type">".mp3"</string>
+    <string name="voicedata_time">"00:00"</string>
+    <string name="voicedata_ready">"플레이 버튼을 눌러주세요."</string>
+    <string name="voicedata_continue_toast">"잠시후 다음 봉독이 시작됩니다."</string>
+    <string name="txt_background_voice_play">백그라운드에서 봉독이 계속됩니다</string>
+    <!--Fragment_OldBible-->
+    
+    <!--Fragment_NewBible-->
+    <string name="frg_new_bible_1">더이상 페이지가 없습니다.</string>
+    
+    <!--Fragment_Note-->
+    <string name="frg_note_alert_01">공유</string>
+    <string name="frg_note_alert_02">보기</string>
+    <string name="frg_note_alert_03">수정</string>
+    <string name="frg_note_alert_04">삭제</string>
+    <string name="frg_note_alert_05">닫기</string>
+    <string name="frg_note_alert_06">닫기</string>
+    <string name="frg_note_alert_07">공유하기</string>
+    <string name="frg_note_alert_08">삭제 되었습니다</string>
+    <string name="frg_note_alert_09">데이터 목록이 없습니다</string>
+    
+    <string name="frg_note_writer_01">제목을 입력하세요.</string>
+    <string name="frg_note_writer_02">내용을 입력하세요.</string>
+    <string name="frg_note_writer_03">노트에 추가되었습니다.</string>
+    <string name="frg_note_writer_04">노트에 수정되었습니다.</string>
+    <string name="frg_note_writer_05">새로운 노트에 작성중입니다 내용을 입력하세요.</string>
+    <!--Fragment_Note-->
+    
+    <!--Fragment_Prayer-->
+    <string name="txt_prayer_description00">"주기도문"</string>
+	<string name="txt_prayer_description01">"주기도문 새번역"</string>
+	<string name="txt_prayer_description02">"The Lords Prayer"</string>
+	<string name="txt_prayer_description03">"사도신경 새번역"</string>
+	<string name="txt_prayer_description04">"사도신경"</string>
+	<string name="txt_prayer_description05">"The Apostles Creed"</string>
+	<string name="txt_prayer_description06">"십계명"</string>
+	<string name="txt_prayer_description07">"교독문"</string>
+	<string name="txt_prayer_description08">"심방사전"</string>
+	<string name="txt_prayer_description09">"교독문(구)"</string>
+	
+	<string name="txt_kyodok_description00">"전체보기"</string>
+	<string name="txt_kyodok_description01">"1.시편1편"</string>
+	<string name="txt_kyodok_description02">"2.시편2편"</string>
+	<string name="txt_kyodok_description03">"3.시편4편"</string>
+	<string name="txt_kyodok_description04">"4.시편5편"</string>
+	<string name="txt_kyodok_description05">"5.시편8편"</string>
+	<string name="txt_kyodok_description06">"6.시편10편"</string>
+	<string name="txt_kyodok_description07">"7.시편13편"</string>
+	<string name="txt_kyodok_description08">"8.시편14편"</string>
+	<string name="txt_kyodok_description09">"9.시편15편"</string>
+	<string name="txt_kyodok_description10">"10.시편16편"</string>
+	<string name="txt_kyodok_description11">"11.시편17편"</string>
+	<string name="txt_kyodok_description12">"12.시편19편"</string>
+	<string name="txt_kyodok_description13">"13.시편23편"</string>
+	<string name="txt_kyodok_description14">"14.시편24편"</string>
+	<string name="txt_kyodok_description15">"15.시편27편"</string>
+	<string name="txt_kyodok_description16">"16.시편28편"</string>
+	<string name="txt_kyodok_description17">"17.시편 29편"</string>
+	<string name="txt_kyodok_description18">"18.시편31편"</string>
+	<string name="txt_kyodok_description19">"19.시편32편"</string>
+	<string name="txt_kyodok_description20">"20.시편 33편"</string>
+	<string name="txt_kyodok_description21">"21.시편34편"</string>
+	<string name="txt_kyodok_description22">"22.시편37편"</string>
+	<string name="txt_kyodok_description23">"23.시편43편"</string>
+	<string name="txt_kyodok_description24">"24.시편46편"</string>
+	<string name="txt_kyodok_description25">"25.시편47편"</string>
+	<string name="txt_kyodok_description26">"26.시편50편"</string>
+	<string name="txt_kyodok_description27">"27.시편51편"</string>
+	<string name="txt_kyodok_description28">"28.시편63편"</string>
+	<string name="txt_kyodok_description29">"29.시편65편"</string>
+	<string name="txt_kyodok_description30">"30.시편67편"</string>
+	<string name="txt_kyodok_description31">"31.시편 68편"</string>
+	<string name="txt_kyodok_description32">"32.시편71편"</string>
+	<string name="txt_kyodok_description33">"33.시편72편"</string>
+	<string name="txt_kyodok_description34">"34.시편81편"</string>
+	<string name="txt_kyodok_description35">"35.시편84편"</string>
+	<string name="txt_kyodok_description36">"36.시편 90편"</string>
+	<string name="txt_kyodok_description37">"37.시편91편"</string>
+	<string name="txt_kyodok_description38">"38.시편92편"</string>
+	<string name="txt_kyodok_description39">"39.시편95편"</string>
+	<string name="txt_kyodok_description40">"40.시편96편"</string>
+	<string name="txt_kyodok_description41">"41.시편97편"</string>
+	<string name="txt_kyodok_description42">"42.시편98편"</string>
+	<string name="txt_kyodok_description43">"43.시편99편"</string>
+	<string name="txt_kyodok_description44">"44.시편100편"</string>
+	<string name="txt_kyodok_description45">"45.시편103편"</string>
+	<string name="txt_kyodok_description46">"46.시편104편"</string>
+	<string name="txt_kyodok_description47">"47.시편105편"</string>
+	<string name="txt_kyodok_description48">"48.시편106편"</string>
+	<string name="txt_kyodok_description49">"49.시편108편"</string>
+	<string name="txt_kyodok_description50">"50.시편116편"</string>
+	<string name="txt_kyodok_description51">"51.시편118편"</string>
+	<string name="txt_kyodok_description52">"52.시편119편"</string>
+	<string name="txt_kyodok_description53">"53.시편121편"</string>
+	<string name="txt_kyodok_description54">"54.시편126편"</string>
+	<string name="txt_kyodok_description55">"55.시편127편"</string>
+	<string name="txt_kyodok_description56">"56.시편128편"</string>
+	<string name="txt_kyodok_description57">"57.시편130편"</string>
+	<string name="txt_kyodok_description58">"58.시편133편"</string>
+	<string name="txt_kyodok_description59">"59.시편136편"</string>
+	<string name="txt_kyodok_description60">"60.시편139편"</string>
+	<string name="txt_kyodok_description61">"61.시편142편"</string>
+	<string name="txt_kyodok_description62">"62.시편143편"</string>
+	<string name="txt_kyodok_description63">"63.시편145편"</string>
+	<string name="txt_kyodok_description64">"64. 시편148편"</string>
+	<string name="txt_kyodok_description65">"65. 시편149편"</string>
+	<string name="txt_kyodok_description66">"66. 시편150편"</string>
+	<string name="txt_kyodok_description67">"67. 잠언 3장"</string>
+	<string name="txt_kyodok_description68">"68. 이사야 40장(1)"</string>
+	<string name="txt_kyodok_description69">"69. 이사야 40장(2)"</string>
+	<string name="txt_kyodok_description70">"70. 이사야 42장"</string>
+	<string name="txt_kyodok_description71">"71. 이사야 55장"</string>
+	<string name="txt_kyodok_description72">"72. 이사야 58장"</string>
+	<string name="txt_kyodok_description73">"73. 이사야 65장"</string>
+	<string name="txt_kyodok_description74">"74. 마태복음 5장"</string>
+	<string name="txt_kyodok_description75">"75. 마태복음 6장"</string>
+	<string name="txt_kyodok_description76">"76. 요한복음 1장"</string>
+	<string name="txt_kyodok_description77">"77. 요한복음 3장"</string>
+	<string name="txt_kyodok_description78">"78. 요한복음 14장"</string>
+	<string name="txt_kyodok_description79">"79. 요한복음 15장"</string>
+	<string name="txt_kyodok_description80">"80. 고린도후서 4장"</string>
+	<string name="txt_kyodok_description81">"81. 에베소서 4장"</string>
+	<string name="txt_kyodok_description82">"82. 빌립보서 2장"</string>
+	<string name="txt_kyodok_description83">"83. 빌립보서 4장"</string>
+	<string name="txt_kyodok_description84">"84. 히브리서 11장"</string>
+	<string name="txt_kyodok_description85">"85. 요한1서 4장"</string>
+	<string name="txt_kyodok_description86">"86. 요한계시록 14장"</string>
+	<string name="txt_kyodok_description87">"87. 요한계시록 21장"</string>
+	<string name="txt_kyodok_description88">"88. 세례(침례)(1)"</string>
+	<string name="txt_kyodok_description89">"89. 세례(침례)(2)"</string>
+	<string name="txt_kyodok_description90">"90. 세례(침례)(3)"</string>
+	<string name="txt_kyodok_description91">"91. 성찬(1)"</string>
+	<string name="txt_kyodok_description92">"92. 성찬(2)"</string>
+	<string name="txt_kyodok_description93">"93. 새해(1)"</string>
+	<string name="txt_kyodok_description94">"94. 새해(2)"</string>
+	<string name="txt_kyodok_description95">"95. 가정주일"</string>
+	<string name="txt_kyodok_description96">"96. 어린이주일"</string>
+	<string name="txt_kyodok_description97">"97. 청년주일"</string>
+	<string name="txt_kyodok_description98">"98. 어버이주일"</string>
+	<string name="txt_kyodok_description99">"99. 나라 사랑(1)"</string>
+	<string name="txt_kyodok_description100">"100. 나라 사랑(2)"</string>
+	<string name="txt_kyodok_description101">"101. 나라사랑(3)"</string>
+	<string name="txt_kyodok_description102">"102. 나라사랑(4)"</string>
+	<string name="txt_kyodok_description103">"103. 나라 사랑(5)"</string>
+	<string name="txt_kyodok_description104">"104. 종교개혁주일"</string>
+	<string name="txt_kyodok_description105">"105. 감사절(1)"</string>
+	<string name="txt_kyodok_description106">"106. 감사절(2)"</string>
+	<string name="txt_kyodok_description107">"107. 임직식(1)"</string>
+	<string name="txt_kyodok_description108">"108. 임직식(2)"</string>
+	<string name="txt_kyodok_description109">"109. 헌당예배"</string>
+	<string name="txt_kyodok_description110">"110. 선교주일"</string>
+	<string name="txt_kyodok_description111">"111. 성서주일"</string>
+	<string name="txt_kyodok_description112">"112. 교회교육주일"</string>
+	<string name="txt_kyodok_description113">"113. 자연과 환경"</string>
+	<string name="txt_kyodok_description114">"114. 이웃 사랑"</string>
+	<string name="txt_kyodok_description115">"115. 구주 강림(1)"</string>
+	<string name="txt_kyodok_description116">"116. 구주 강림(2)"</string>
+	<string name="txt_kyodok_description117">"117. 구주 강림(3)"</string>
+	<string name="txt_kyodok_description118">"118. 구주 강림(4)"</string>
+	<string name="txt_kyodok_description119">"119. 성탄절(1)"</string>
+	<string name="txt_kyodok_description120">"120. 성탄절(2)"</string>
+	<string name="txt_kyodok_description121">"121. 주현절(1)"</string>
+	<string name="txt_kyodok_description122">"122. 주현절(2)"</string>
+	<string name="txt_kyodok_description123">"123. 주현절(3)"</string>
+	<string name="txt_kyodok_description124">"124. 사순절(1)"</string>
+	<string name="txt_kyodok_description125">"125. 사순절(2)"</string>
+	<string name="txt_kyodok_description126">"126. 사순절(3)"</string>
+	<string name="txt_kyodok_description127">"127. 사순절(4)"</string>
+	<string name="txt_kyodok_description128">"128. 사순절(5)"</string>
+	<string name="txt_kyodok_description129">"129. 종려주일"</string>
+	<string name="txt_kyodok_description130">"130. 고난주간(1)"</string>
+	<string name="txt_kyodok_description131">"131. 고난주간(2)"</string>
+	<string name="txt_kyodok_description132">"132. 고난주간(3)"</string>
+	<string name="txt_kyodok_description133">"133. 부활절(1)"</string>
+	<string name="txt_kyodok_description134">"134. 부활절(2)"</string>
+	<string name="txt_kyodok_description135">"135. 성령 강림(1)"</string>
+	<string name="txt_kyodok_description136">"136. 성령 강림(2)"</string>
+	<string name="txt_kyodok_description137">"137. 삼위일체"</string>
+	
+	<string name="txt_old_kyodok_description00">"전체보기"</string>
+	<string name="txt_old_kyodok_description01">"1. 시편1편 "</string>
+	<string name="txt_old_kyodok_description02">"2. 시편2편"</string>
+	<string name="txt_old_kyodok_description03">"3. 시편4편"</string>
+	<string name="txt_old_kyodok_description04">"4. 시편8편"</string>
+	<string name="txt_old_kyodok_description05">"5. 시편13편"</string>
+	<string name="txt_old_kyodok_description06">"6. 시편15편"</string>
+	<string name="txt_old_kyodok_description07">"7. 시편16편"</string>
+	<string name="txt_old_kyodok_description08">"8. 시편19편"</string>
+	<string name="txt_old_kyodok_description09">"9. 시편23편"</string>
+	<string name="txt_old_kyodok_description10">"10. 시편 27편"</string>
+	<string name="txt_old_kyodok_description11">"11. 시편 28편"</string>
+	<string name="txt_old_kyodok_description12">"12. 시편 32편"</string>
+	<string name="txt_old_kyodok_description13">"13. 시편34편"</string>
+	<string name="txt_old_kyodok_description14">"14. 시편 46편"</string>
+	<string name="txt_old_kyodok_description15">"15. 시편 51편"</string>
+	<string name="txt_old_kyodok_description16">"16. 시편 63편"</string>
+	<string name="txt_old_kyodok_description17">"17. 시편65편"</string>
+	<string name="txt_old_kyodok_description18">"18. 시편67편"</string>
+	<string name="txt_old_kyodok_description19">"19. 시편 84편"</string>
+	<string name="txt_old_kyodok_description20">"20. 시편 91편"</string>
+	<string name="txt_old_kyodok_description21">"21. 시편 95편"</string>
+	<string name="txt_old_kyodok_description22">"22. 시편 96편"</string>
+	<string name="txt_old_kyodok_description23">"23. 시편 98편"</string>
+	<string name="txt_old_kyodok_description24">"24. 시편 100편"</string>
+	<string name="txt_old_kyodok_description25">"25. 시편 103편"</string>
+	<string name="txt_old_kyodok_description26">"26. 시편 104편"</string>
+	<string name="txt_old_kyodok_description27">"27. 시편 121편"</string>
+	<string name="txt_old_kyodok_description28">"28. 시편 127편"</string>
+	<string name="txt_old_kyodok_description29">"29. 시편 130편"</string>
+	<string name="txt_old_kyodok_description30">"30. 시편 139편"</string>
+	<string name="txt_old_kyodok_description31">"31. 시편 142편"</string>
+	<string name="txt_old_kyodok_description32">"32. 시편 143편"</string>
+	<string name="txt_old_kyodok_description33">"33. 시편 150편"</string>
+	<string name="txt_old_kyodok_description34">"34. 잠언 3장"</string>
+	<string name="txt_old_kyodok_description35">"35. 이사야 35장"</string>
+	<string name="txt_old_kyodok_description36">"36. 이사야 40장(1)"</string>
+	<string name="txt_old_kyodok_description37">"37. 이사야 40장(2)"</string>
+	<string name="txt_old_kyodok_description38">"38. 이사야 42장"</string>
+	<string name="txt_old_kyodok_description39">"39. 이사야 55장"</string>
+	<string name="txt_old_kyodok_description40">"40. 이사야 58장"</string>
+	<string name="txt_old_kyodok_description41">"41. 이사야 65장"</string>
+	<string name="txt_old_kyodok_description42">"42. 마태복음 5장"</string>
+	<string name="txt_old_kyodok_description43">"43. 마태복음 6장"</string>
+	<string name="txt_old_kyodok_description44">"44. 요한복음 1장"</string>
+	<string name="txt_old_kyodok_description45">"45. 요한복음 3장"</string>
+	<string name="txt_old_kyodok_description46">"46. 요한복음 14장"</string>
+	<string name="txt_old_kyodok_description47">"47. 요한복음 15장"</string>
+	<string name="txt_old_kyodok_description48">"48. 고린도전서 13장"</string>
+	<string name="txt_old_kyodok_description49">"49. 빌립보서 2장"</string>
+	<string name="txt_old_kyodok_description50">"50. 빌립보서 4장"</string>
+	<string name="txt_old_kyodok_description51">"51. 히브리서 11장"</string>
+	<string name="txt_old_kyodok_description52">"52. 요한일서 4장"</string>
+	<string name="txt_old_kyodok_description53">"53. 요한계시록 21장"</string>
+	<string name="txt_old_kyodok_description54">"54. 성례식"</string>
+	<string name="txt_old_kyodok_description55">"55. 강림절(1)"</string>
+	<string name="txt_old_kyodok_description56">"56. 강림절(2)"</string>
+	<string name="txt_old_kyodok_description57">"57. 성탄절"</string>
+	<string name="txt_old_kyodok_description58">"58. 종려주일"</string>
+	<string name="txt_old_kyodok_description59">"59. 고난주간(1)"</string>
+	<string name="txt_old_kyodok_description60">"60. 고난주간(2)"</string>
+	<string name="txt_old_kyodok_description61">"61. 수난일"</string>
+	<string name="txt_old_kyodok_description62">"62. 부활절"</string>
+	<string name="txt_old_kyodok_description63">"63. 성령강림절"</string>
+	<string name="txt_old_kyodok_description64">"64. 감사절(1)"</string>
+	<string name="txt_old_kyodok_description65">"65. 감사절(2)"</string>
+	<string name="txt_old_kyodok_description66">"66. 헌당예배"</string>
+	<string name="txt_old_kyodok_description67">"67. 신년예배"</string>
+	<string name="txt_old_kyodok_description68">"68. 국가기념일주일"</string>
+	<string name="txt_old_kyodok_description69">"69. 3.1절"</string>
+	<string name="txt_old_kyodok_description70">"70. 광복절"</string>
+	<string name="txt_old_kyodok_description71">"71. 어린이주일"</string>
+	<string name="txt_old_kyodok_description72">"72. 어버이주일"</string>
+	<string name="txt_old_kyodok_description73">"73. 종교개혁주일"</string>
+	<string name="txt_old_kyodok_description74">"74. 선교주일"</string>
+	<string name="txt_old_kyodok_description75">"75. 성서주일 "</string>
+	<string name="txt_old_kyodok_description76">"76. 취임식"</string>
+	<string name="txt_old_kyodok_description77">"77. 잠언 3장"</string>
+	<string name="txt_old_kyodok_description78">"78. 마태 16장 교회창립주일"</string>
+	
+	<string name="txt_simbang_description00">"전체보기"</string>
+	<string name="txt_simbang_description01">"출생"</string>
+	<string name="txt_simbang_description02">"생일"</string>
+	<string name="txt_simbang_description03">"교육"</string>
+	<string name="txt_simbang_description04">"사업"</string>
+	<string name="txt_simbang_description05">"임종자,사망관"</string>
+	<string name="txt_simbang_description07">"부모,어린이,남편,사망"</string>
+	<string name="txt_simbang_description08">"교역자,불신자 사망"</string>
+	<string name="txt_simbang_description09">"자녀,부모,교역자 추도"</string>
+	<string name="txt_simbang_description10">"불신 부모의 추도"</string>
+	
+	<string name="txt_simbang_description11">"병이 생기는 원인"</string>
+	<string name="txt_simbang_description12">"부인,노인,중 환자"</string>
+	<string name="txt_simbang_description13">"형식적인 신자"</string>
+	<string name="txt_simbang_description14">"믿음이 약한자"</string>
+	<string name="txt_simbang_description15">"기도생활 안 하는자"</string>
+	<string name="txt_simbang_description16">"타락한 교인"</string>
+	<string name="txt_simbang_description17">"교회 불평자"</string>
+	<string name="txt_simbang_description18">"신앙적 동요"</string>
+	<string name="txt_simbang_description19">"근심,염려하는자"</string>
+	<string name="txt_simbang_description19_5">"외식적 신자"</string>
+	<string name="txt_simbang_description20">"주거"</string>
+	
+	<string name="txt_simbang_description21">"직업"</string>
+	<string name="txt_simbang_description22">"환경"</string>
+	<string name="txt_simbang_description23">"환경"</string>
+	<string name="txt_simbang_description24">"노인"</string>
+	<string name="txt_simbang_description25">"청년"</string>
+	<string name="txt_simbang_description26">"소년"</string>
+	<string name="txt_simbang_description27">"어린이"</string>
+	<string name="txt_simbang_description28">"완고한 자"</string>
+	<string name="txt_simbang_description29">"죄가 많다는 자"</string>
+	<string name="txt_simbang_description30">"헛된 것을 추구하는 자"</string>
+
+	<string name="txt_simbang_description31">"우상 숭배자"</string>
+	<string name="txt_simbang_description32">"원망하는자"</string>
+	<string name="txt_simbang_description33">"믿으면 핍박받는다는 자"</string>
+	<string name="txt_simbang_description34">"죄가 없다고 교만한 자"</string>
+	<string name="txt_simbang_description35">"가까이"</string>
+	<string name="txt_simbang_description36">"가난"</string>
+	<string name="txt_simbang_description37">"감사"</string>
+	<string name="txt_simbang_description38">"깨끗"</string>
+	<string name="txt_simbang_description39">"결심"</string>
+	<string name="txt_simbang_description40">"겸손"</string>
+	<string name="txt_simbang_description41">"결혼"</string>
+	<string name="txt_simbang_description42">"가정"</string>
+	<string name="txt_simbang_description43">"계명"</string>
+	<string name="txt_simbang_description44">"고난"</string>
+	<string name="txt_simbang_description45">"교만"</string>
+	<string name="txt_simbang_description46">"구원"</string>
+	<string name="txt_simbang_description47">"기도"</string>
+	<string name="txt_simbang_description48">"복"</string>
+	<string name="txt_simbang_description49">"구제"</string>
+    
+	
+	<string name="frg_praye_01">"기도문"</string>
+	<!--Fragment_Prayer-->
+	
+	<!--Fragment_Dictionary-->
+	<string name="frg_dicitonary_01">QjRGM0YwMkZDMkI3Q0UzNTQ5RDdDREQxRkJCQTMyRkUyQjcxODg0Q0IwN0JCREM1MDlDMjM1NjdBQTE0ODkwOTZEQUE4OUYyNzI5RERCNEQ5REQ3OTlBNDFEMDVERjc2MjM5NEEzMTIzRkJEQ0RCNzAyMzg0MzlFOTQyQjE5OEJGOTY3N0NBN0IxRjAyMDlGQTcwRTAwODJCMzIxQzQ2Qg==</string>
+	<string name="frg_dicitonary_02">"단연컨데 예배드리기 정말 편리한 성경 어플입니다 확인 을 누르시면 연결할 성경앱 다운로드 페이지로 이동합니다"</string>
+	<string name="frg_dicitonary_03">"shalom.bible.hymn.cion"</string>
+	<string name="frg_dicitonary_04">"성경앱 연결"</string>
+	<string name="frg_dicitonary_05">"성경인명사전"</string>
+	
+	<!--Fragment_Dictionary-->
+	
+	<!--Fragment_Podcast-->
+	<string name="frg_podcast_01">"Mzk1OUQ3MEUzRjgxM0JDNkY4ODFBQTI4MjExRjUwRDEwQjNDOTI2QkNEQjExMEEwMjE3RkQ2NjNGMDhCNzIzMjYzRjkyRTZBNTNEM0ExNTVGMEU0RkExNzkyRjhEMzAwREE3NDUyRjE2QjAwRENFOTJDOUQyNkVDRDE3RTlGMUQ="</string>
+	<string name="frg_podcast_02">"데이터 연결상태가 좋지않습니다\n다시 시도하시겠습니까?"</string>
+	<string name="frg_podcast_03">"다시시도"</string>
+	<string name="frg_podcast_04">"취소"</string>
+	<string name="frg_podcast_05">"즐겨듣기"</string>
+	<string name="frg_podcast_06">"'즐겨듣기'항목에 추가하였습니다"</string>
+	<string name="frg_podcast_07">"'즐겨듣기'항목에서 삭제하였습니다"</string>
+	<string name="frg_podcast_08">"460"</string>
+	<string name="frg_podcast_09">"즐겨듣기 보관함"</string>
+	<string name="frg_podcast_10">"다운로드 보관함"</string>
+	<string name="frg_podcast_11">"보관함선택"</string>
+	<string name="frg_podcast_12">"삭제"</string>
+	<string name="frg_podcast_13">"취소"</string>
+	<string name="frg_podcast_14">"삭제하시겠습니까?"</string>
+	<string name="frg_podcast_15">"삭제되었습니다"</string>
+	<!--Fragment_Podcast-->
+	
+	<!--Fragment_CCM-->
+	<string name="frg_ccm_01">"455"</string>
+	<string name="frg_ccm_02">"Mzk1OUQ3MEUzRjgxM0JDNkY4ODFBQTI4MjExRjUwRDEwQjNDOTI2QkNEQjExMEEwMjE3RkQ2NjNGMDhCNzIzMjYzRjkyRTZBNTNEM0ExNTVGMEU0RkExNzkyRjhEMzAwREE3NDUyRjE2QjAwRENFOTJDOUQyNkVDRDE3RTlGMUQ="</string>
+	<string name="frg_ccm_03">"'즐겨듣기'항목에 추가하였습니다"</string>
+	<string name="frg_ccm_04">"'즐겨듣기'항목에서 삭제하였습니다"</string>
+	<string name="frg_ccm_05">"즐겨듣기"</string>
+	<string name="frg_ccm_06">"등록해제"</string>
+	<string name="frg_ccm_07">"전체선택"</string>
+	<string name="frg_ccm_08">"선택해제"</string>
+	<string name="frg_ccm_09">"오디오시작"</string>
+	<string name="frg_ccm_10">"비디오시작"</string>
+	<string name="frg_ccm_11">"'처음'재생목록입니다"</string>
+	<string name="frg_ccm_12">"하나님은 당신을 사랑하십니다"</string>
+	<string name="frg_ccm_13">"'종료'하시려면 잠금버튼을 해제하세요"</string>
+	<string name="frg_ccm_14">"삭제"</string>
+	<string name="frg_ccm_15">"보관함"</string>
+	<string name="frg_ccm_16">"즐겨듣기추가"</string>
+	<string name="frg_ccm_17">"선택 후 듣기"</string>
+	<string name="frg_ccm_18">"즐겨듣는 음악을 추가하거나 리스트 선택 후 바로 감상하세요"</string>
+	<string name="frg_ccm_19">"삭제"</string>
+	<string name="frg_ccm_20">"취소"</string>
+	<string name="frg_ccm_21">"삭제하시겠습니까?"</string>
+	<string name="frg_ccm_22">"삭제되었습니다"</string>
+	<!--Fragment_CCM-->
+	
+	<!--Activity_Podcast-->
+	<string name="activity_podcast_01">"데이터 목록이 없습니다"</string>
+	<string name="activity_podcast_02">"잠시만 기다려주세요"</string>
+	<string name="activity_podcast_03">"데이터 연결상태가 좋지않습니다\n다시 시도하시겠습니까?"</string>
+	<string name="activity_podcast_04">"다시시도"</string>
+	<string name="activity_podcast_05">"취소"</string>
+	<string name="activity_podcast_06">"/shalom_bible/"</string>
+	<string name="activity_podcast_07">"%"</string>
+	<string name="activity_podcast_08">"0%"</string>
+	<string name="activity_podcast_09">"다운"</string>
+	<string name="activity_podcast_10">"취소"</string>
+	<string name="activity_podcast_11">"3G/LTE다운로드시 가입요금제에따라 데이터가 발생됩니다 다운로드 하시겠습니까?"</string>
+	<string name="activity_podcast_12">백그라운드에서 플레이합니다</string>
+	<string name="activity_podcast_13">"다운로드 받은 파일이 존재하지않습니다 새로 다운로드 하시겠습니까?"</string>
+	<string name="activity_podcast_14">"다운로드를 위해서는 휴대기기 설정-앱 권한-저장공간-허용 되어야 적용됨을 알려드립니다."</string>
+	<string name="activity_podcast_15">데이터 목록이 없습니다</string>
+	<string name="activity_podcast_16">"'이어듣기'항목에 추가하였습니다"</string>
+	<string name="activity_podcast_17">"'이어듣기'항목에서 삭제하였습니다"</string>
+	<string name="activity_podcast_18_1">전체선택</string>
+    <string name="activity_podcast_18_2">선택해제</string>
+    <string name="activity_podcast_19">선택듣기</string>
+    <string name="activity_podcast_20">"'처음'재생목록입니다"</string>
+    <string name="activity_podcast_21">"보관함"</string>
+    <string name="activity_podcast_22">"즐겨듣기 항목이 없습니다"</string>
+    <string name="activity_podcast_23">"삭제"</string>
+    <string name="activity_podcast_24">"삭제되었습니다"</string>
+    <string name="activity_podcast_25">"연속듣기"</string>
+    <string name="activity_podcast_26">"한번듣기"</string>
+    <string name="activity_podcast_27">"리스트 선택 후 '선택듣기' 버튼을 눌러주세요"</string>
+    <string name="activity_podcast_28">"다운로드 항목이 없습니다"</string>
+    <string name="activity_podcast_29">"죄송합니다 다운로드 파일이 존재하지않습니다 재 다운로드 후 실행하세요"</string>
+	<!--Activity_Podcast-->
+	
+    <!--Activity_Question-->
+    <string name="txt_question_title">"문의하기"</string>
+    <string name="txt_network_error">네트워크가 연결되지 않았습니다.\n설정창으로 가시겠습니까?</string>
+    <string name="txt_confirm">확인</string>
+	<string name="txt_cancel">취소</string>
+	<string name="txt_url">"EF94F04F1BC32C6D87680E03C660823F8C9844AD5B03727FFD2828721C58544CC6D611E9061AE30E228F3BB60226835CBF0C4A15A8B4FE43A55324C5BAE2815E"</string>
+	<string name="txt_question_back">"'뒤로'버튼을 한번 더  누르시면 문의하기를 종료합니다."</string>
+    <!--Activity_Question-->
+    
+    <!--Activity_Search-->
+    <string name="activity_search_01">"검색어를 입력해주세요."</string>
+    <string name="activity_search_02">"Tip.설정-성경1 선택기준으로 검색됩니다\n현재 검색된 구절이 없습니다!"</string>
+    <string name="activity_search_03">"성경검색"</string>
+    <string name="activity_search_04">검색구절 노트</string>
+    <string name="activity_search_05">기록모드</string>
+    <string name="activity_search_06">이동모드</string>
+    <string name="activity_search_07">"노트에 기록하거나 공유할수있습니다"</string>
+    <string name="activity_search_08">"선택하신 '구절로' 이동합니다"</string>
+    <!--Activity_Search-->
+    
+    <string name="ver">1.0.5</string>
+    <string name="build">4040</string>
+    <string name="pic_size_devide">1</string>
+    <string name="verkind">Beta</string>
+    <string name="copyright">Copyrightⓒ 2017 샬롬 바이블 by DS.</string>
+    <string name="lang">ko</string>
+    <string name="default_country">kr</string>
+    <string name="server_path">http://tarks.net/favorite/</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">설정</string>
+    <string name="app_info">어플리케이션 정보..</string>
+    <string name="yes">확인</string>
+    <string name="no">아니오</string>
+    <string name="app_setting">어플리케이션 설정</string>
+    <string name="appinfo">어플리케이션 정보</string>
+    <string name="setting">설정</string>
+    <string name="plan">일정</string>
+    <string name="networkerror">네트워크 오류</string>
+    <string name="networkerrord">인터넷이 연결되어있지 않거나 접속이 불안정합니다.</string>
+    <string name="refresh">새로고침</string>
+    <string name="community">터치하시면 기도 커뮤니티로 이동합니다.</string>
+    <string name="community_subtitle">하나님께 음성녹음 기도 또는  글작성 기도를 드려보세요! 하나님은 당신을 사랑하십니다.</string>
+    <string name="moreview">더보기</string>
+    <string name="no_info">정보가 없습니다.</string>
+    <string name="contact">연락</string>
+    <string name="request">신청</string>
+    <string name="sign_up">등록</string>
+    <string name="saved">저장되었습니다.</string>
+    <string name="special_user">특별한 사용자</string>
+    <string name="logout">로그아웃</string>
+    <string name="logout_des">이 앱에 등록되어있는 모든 개인정보를 삭제하고 초기화합니다.</string>
+    <string name="logout_really">정말로 이 앱의 모든 정보를 삭제할까요?(Tarksteam 계정은 사라지지 않습니다.)</string>
+    <string name="during_logout">로그아웃 중입니다...</string>
+    <string name="notice">공지사항</string>
+    <string name="notification">알림</string>
+    <string name="share">공유</string>
+    <string name="account">로그인(계정)</string>
+    <string name="home">홈</string>
+    <string name="start">시작하기</string>
+    <string name="tarks_account">Tarks 계정</string>
+    <string name="tarks_account_des">로그인하면 휴대폰이나 기기가 바뀌어도 계정 정보를 잃지 않습니다.</string>
+    <string name="id">아이디</string>
+    <string name="password">비밀번호</string>
+    <string name="type_id">아이디를 입력하세요.</string>
+    <string name="signing_in">"로그인 중입니다..."</string>
+    <string name="welcome">환영합니다</string>
+    <string name="error_login">아이디 또는 비밀번호를 잘못 입력하셨거나, 없는 계정입니다.</string>
+    <string name="error">오류</string>
+    <string name="ok">확인</string>
+    <string name="name">이름</string>
+    <string name="phone_number">휴대폰 번호</string>
+    <string name="registering">"등록 중입니다..."</string>
+    <string name="noname">이름을 입력해 주세요.</string>
+    <string name="error_des">작업을 진행하는 도중 오류가 발생했습니다. 잠시후에 다시 시도해주세요.</string>
+    <string name="permission_denied">죄송합니다. Tarks 규정 위반으로 인해 차단된 사용자입니다.</string>
+    <string name="reg_id_error">다른 기기에 로그인해 로그아웃되었습니다. \n 계속 사용하려면 다시 로그인해야 합니다.\n Tarks 계정을 사용중이 아니었다면 기존 계정은 삭제됩니다.</string>
+    <string name="not_support_feature">지원되지 않는 기능</string>
+    <string name="skip">건너뛰기</string>
+    <string name="join">회원가입</string>
+    <string name="user_info_des">본 정보는 개인정보를 수집하지않으며\n단순히 이름/닉네임만을 등록하여  누구나 자유롭게\n기도 커뮤니티의 목적만있음을 알려드립니다\n </string>
+    <string name="name_1">성</string>
+    <string name="name_2">이름</string>
+    <string name="phone_number_des">전화번호로 누가 날 좋아하는지 찾습니다.</string>
+    <string name="birthday">생일</string>
+    <string name="birthday_des">생년월일로 누가 날 좋아하는지 찾습니다.</string>
+    <string name="location">위치로 찾기</string>
+    <string name="location_des">자신이 살고 있는 곳으로 찾습니다.</string>
+    <string name="school">학교로 찾기</string>
+    <string name="school_des">재학이나 졸업한 학교로 찾습니다.</string>
+    <string name="favorite_">좋아하는 사람</string>
+    <string name="favorite_des">얼마나 많은 사람이 날 좋아할까 궁금하셨죠? 지금 확인해보세요.</string>
+    <string name="find">찾기</string>
+    <string name="message">메세지</string>
+    <string name="phone_number_content">휴대폰 번호를 입력하여 당신을 좋아하는 사람이 몇 명인지 확인해보세요.</string>
+    <string name="register_favorite">좋아하는 사람 등록</string>
+    <string name="check_result">결과 확인하기</string>
+    <string name="my_favorite_people">좋아하는 사람</string>
+    <string name="people_that_like_me">나를 좋아하는 사람</string>
+    <string name="test_result">%1$s님을 좋아하는 사람은 %2$s명 입니다.</string>
+    <string name="who_favorited_me">누가 나를 좋아할까?</string>
+    <string name="check_how_many_people_are_favorite_me">얼마나 많은 사람이 나를 좋아하는지 확인해보세요.</string>
+    <string name="check_with_kakaostory">카카오스토리로 확인하기</string>
+    <string name="check_with_kakaotalk">카카오톡으로 확인하기</string>
+    <string name="check_with_facebook">Fackbook으로 확인하기</string>
+    <string name="check_with_twitter">트위터로 확인하기</string>
+    <string name="people_are_like_you">명이 나를 좋아합니다.</string>
+    <string name="peek">엿보기 스킬</string>
+    <string name="peek_des">나를 좋아하는 사람의 성(Last name)을 살짝 봅니다.</string>
+    <string name="contact_pick_error">사용할수 없는 연락처입니다.</string>
+    <string name="blank_error">아무것도 입력하지 않았습니다.</string>
+    <string name="server_connection_error_des">연결중 오류가 발생했습니다\n데이터 연결상태 확인 후\n다시 시도해주세요</string>
+    <string name="check_service_status">서비스 상태 확인</string>
+    <string name="male">남자</string>
+    <string name="female">여자</string>
+    <string name="cut_image">이미지 자르기</string>
+    <string name="rotate">회전</string>
+    <string name="find_account_info">ID/PW 찾기</string>
+    <string name="send_feedback">의견 보내기</string>
+    <string name="send_feedback_des">개발자에게 의견을 보냅니다.</string>
+    <string name="delete">삭제</string>
+    <string name="delete_des">삭제하시겠습니까?</string>
+    <string name="deleted">삭제되었습니다.</string>
+    <string name="delete_profile_photo">프로필 사진을 삭제합니다.</string>
+    <string name="profile">프로필</string>
+    <string name="profile_settings_des">당신의 프로필 정보를 설정해보세요.</string>
+    <string name="user_settings">사용자 설정</string>
+    <string name="choose_picture">사진 선택</string>
+    <string name="camera">카메라</string>
+    <string name="no_storage_error">SDCard 또는 여분의 저장 장소가 없습니다.</string>
+    <string name="enquire">문의</string>
+    <string name="choose_email_app">이메일 어플리케이션을 선택해주세요.</string>
+    <string name="write">쓰기</string>
+    <string name="information">정보</string>
+    <string name="user_info">사용자 정보</string>
+    <string name="gender">성별</string>
+    <string name="date">yyyy.MM.dd</string>
+    <string name="a_moment_ago">방금 전</string>
+    <string name="member_info_error_des">알 수 없는 회원정보입니다.</string>
+    <string name="type_a_comment">댓글을 입력해주세요.</string>
+    <string name="date_all">yyyy.MM.dd HH:mm aa</string>
+    <string name="see_previous_comments">이전 댓글 보기</string>
+    <string name="no_content">제목 또는 내용이 없습니다.</string>
+    <string name="copy">복사</string>
+    <string name="warning">경고</string>
+    <string name="notice_new_document">새로운 글을 남겼습니다.</string>
+    <string name="notice_new_comment">댓글을 달았습니다.</string>
+    <string name="add">추가</string>
+    <string name="favorite_add_des">즐겨찾기에 추가하시겠습니까?</string>
+    <string name="added">추가되었습니다.</string>
+    <string name="notice_added_to_favorite">당신을 좋아하는 사람으로 추가했습니다.</string>
+    <string name="sign_in">로그인</string>
+    <string name="edit_profile">프로필 수정</string>
+    <string name="changed">변경되었습니다.</string>
+    <string name="user_explain">%1$s님이</string>
+    <string name="ip_error_des">비정상적인 활동 내역으로 IP가 차단되었습니다.</string>
+    <string name="my_favorites">즐겨찾기</string>
+    <string name="favorites">즐겨찾기</string>
+    <string name="photo">사진</string>
+    <string name="file">파일</string>
+    <string name="pages">페이지</string>
+    <string name="right_now">실시간</string>
+    <string name="app_settings">어플리케이션 설정</string>
+    <string name="notification_and_sound">소리 및 알림</string>
+    <string name="welcome_des">이곳에는 당신이 즐겨찾기한 페이지가 보이는 공간입니다.\n페이지를 즐겨찾기해 원하는 소식을 받아보세요!!</string>
+    <string name="tour_page">페이지 둘러보기</string>
+    <string name="create_page">페이지 생성</string>
+    <string name="create_page_des">페이지를 생성해보세요.\n\n쉽게 커뮤니티를 만들 수 있고, 당신의 친구들과 함께 사용할 수 있습니다.</string>
+    <string name="start_downloading">다운로드 시작...</string>
+    <string name="loading">로딩 중...</string>
+    <string name="cancel_writing_des">글 작성중입니다. 이 글 작성을 취소하고 나가시겠습니까?</string>
+    <string name="unfavorite">즐겨찾기 해제</string>
+    <string name="completed">완료</string>
+    <string name="delete_favorite_des">이 페이지의 즐겨찾기를 해제합니다. 해제하면 이 페이지를 통한 새로운 소식을 받아보실 수 없습니다. 계속하시겠습니까?</string>
+    <string name="page_name">Page Name</string>
+    <string name="add_favorite">Add Favorite</string>
+    <!-- Perm ission -->
+    <string name="permission">권한</string>
+    <string name="write_permission">쓰기 권한</string>
+
+    <!-- Attach Menu -->
+    <string name="attach">첨부</string>
+    <string name="attach_file">파일 첨부</string>
+    <string name="attach_recording">음성기도</string>
+    
+    <!-- Privacy -->
+    <string name="privacy_content">공개 수준</string>
+    <string name="privacy_public">전체 공개</string>
+    <string name="privacy_users">사용자</string>
+    <string name="privacy_relation">모든 관계</string>
+    <string name="privacy_favorites">즐겨찾기</string>
+    <string name="privacy_justme">비밀</string>
+    <string name="privacy_public_des">모든 사람이 볼 수 있습니다.</string>
+    <string name="privacy_users_des">Favorite의 회원만이 볼 수 있습니다.</string>
+    <string name="privacy_relation_des">좋아하거나, 상대방이 당신을 좋아한다고 등록한 사람만이 볼 수 있습니다.</string>
+    <string name="privacy_favorites_des">당신이 즐겨찾기한 사용자만 볼 수 있습니다.</string>
+    <string name="privacy_justme_des">당신 및 글 작성자 등 최소한의 사람만 볼 수 있습니다.</string>
+
+    <!-- Write Permission -->
+    <string name="wr_permission_public">전체</string>
+    <string name="wr_permission_users">사용자만</string>
+    <string name="wr_permission_relation">모든 관계</string>
+    <string name="wr_permission_favorites">즐겨찾기</string>
+    <string name="wr_permission_justme">나만</string>
+    <string name="wr_permission_public_des">모든 사람이 글을 쓸 수 있습니다.</string>
+    <string name="wr_permission_users_des">회원만 글을 쓸 수 있습니다.</string>
+    <string name="wr_permission_relation_des">즐겨찾기에 있거나, 상대방이 날 즐겨찾기에 추가한 경우 쓸 수 있습니다.</string>
+    <string name="wr_permission_favorites_des">즐겨찾기에 추가한 경우에만 쓸 수 있습니다.</string>
+    <string name="wr_permission_justme_des">당신만 쓸 수 있습니다.</string>
+    
+    
+    <string name="txt_finish_ment">"종료하시겠습니까?"</string>
+    <string name="txt_finish_yes">"종료"</string>
+    <string name="txt_finish_no">"취소"</string>
+    <string name="txt_nick_name">"닉네임 : "</string>
+    <string name="txt_edittext_title">"제목(15자이하)"</string>
+    <string name="txt_edittext_content">"내용"</string>
+    <string name="txt_file_title">"파일첨부 : "</string>
+    
+    <string name="default_file_name">My Prayer</string>
+    <string name="toast_recording_finish">녹음이 완료되었습니다</string>
+    
+    <string name="record_in_progress">녹음중</string>
+    <string name="record_prompt">마이크 버튼을 누르세요</string>
+    <string name="play_prompt">플레이 버튼을 누르세요</string>
+    <string name="toast_recording_start">녹음을 시작합니다</string>
+    <string name="toast_media_volume">음성메세지 소리가 안들릴경우 볼륨키 위로버튼을 누르세요</string>
+    <string name="alert_record_yes">첨부</string>
+    <string name="alert_record_no">취소</string>
+    <string name="bt_refresh">목록더보기</string>
+    <string name="permission_record_ment">"음성기도를 녹음하기위해 휴대기기 설정-앱 권한-저장공간 및 마이크-허용 되어야 적용됨을 알려드립니다."</string>
+    <string name="toast_bookmark_on">책갈피추가</string>
+    <string name="toast_bookmark_off">책갈피삭제</string>
+</resources>

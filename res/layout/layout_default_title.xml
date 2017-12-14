@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/header_top_bg" >
+
+    <ImageButton
+        android:id="@+id/btnLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_general_selector"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/btn_title_back_selector" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/titlebar_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_general_selector"
+            android:gravity="right"
+            android:padding="5dp"
+            android:src="@drawable/btn_title_edit_selector"
+            android:visibility="gone" />
+		
+		<!--NoteWriter-->
+        <ImageButton
+            android:visibility="gone" 
+            android:id="@+id/titlebar_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_general_selector"
+            android:gravity="right"
+            android:padding="5dp"
+            android:src="@drawable/btn_pager_title_add_selector"/>
+        
+        <!--Search-->
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_action_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@drawable/btn_text_selector"
+            android:textSize="@dimen/text_m"
+            android:background="@drawable/btn_rounded_corner"/>
+        
+        <!--Podcast-->
+        <ImageButton
+            android:visibility="gone" 
+            android:id="@+id/btn_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_general_selector"
+            android:gravity="right"
+            android:padding="5dp"
+            android:src="@drawable/btn_title_edit_selector"/>
+        
+        <ImageButton
+            android:id="@+id/btn_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_general_selector"
+            android:gravity="right"
+            android:padding="5dp"
+            android:src="@drawable/btn_title_edit_selector"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/btnLeft"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_vb"
+        android:textStyle="bold" />
+
+</RelativeLayout>

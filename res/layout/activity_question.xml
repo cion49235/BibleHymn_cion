@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+    <include
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      layout="@layout/layout_default_title" />
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dip"
+	    android:layout_weight="1">
+	    <LinearLayout
+		     android:orientation="vertical" 
+		     android:layout_width="fill_parent"
+		     android:layout_height="fill_parent"
+		     android:visibility="visible">
+		 	<ProgressBar
+		        android:id="@+id/pb_item01"
+		        style="?android:attr/progressBarStyleHorizontal"
+		        android:layout_width="fill_parent"
+		        android:layout_height="5dp"
+		        android:max="100"
+		        android:progress="0" />
+ 	
+		    <WebView
+		        android:id="@+id/webview"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"/>
+    	</LinearLayout>
+    </RelativeLayout>
+		    <RelativeLayout
+		          android:visibility="gone"
+		          android:id="@+id/admob_native"
+		          android:layout_width="match_parent"
+		          android:layout_height="wrap_content"
+		          android:layout_gravity="center_horizontal"
+		          android:gravity="center"> 
+		    </RelativeLayout>	
+	    
+    <RelativeLayout
+	     android:id="@+id/ad_layout"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content" 
+	     android:layout_gravity="center_horizontal">      
+	 </RelativeLayout>
+</LinearLayout>

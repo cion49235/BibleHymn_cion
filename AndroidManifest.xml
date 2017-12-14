@@ -1,0 +1,310 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="shalom.bible.hymn.cion"
+    android:versionCode="31"
+    android:versionName="1.3.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:name="shalom.bible.hymn.cion.BibleHymnApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_128"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sherlock.Light"
+        android:launchMode="singleTop" 
+        android:hardwareAccelerated="false">
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:name="shalom.bible.hymn.cion.activity.IntroActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:name="shalom.bible.hymn.cion.MainFragmentActivity"/>
+        
+        <activity
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.activity.HymnViewActivity" 
+	        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.activity.QuestionActivity"
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait" 
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+	        android:name="shalom.bible.hymn.cion.fragment.Fragment_Note_Writer" 
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait" 
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+	        android:name="shalom.bible.hymn.cion.activity.SearchActivity" 
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.activity.DictionaryViewActivity"
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.activity.PodcastActivity_Sub"
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.activity.PodcastActivity_Favorite"
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.activity.PodcastActivity_Download_Main"
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.activity.PodcastActivity_Download_Sub"
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity 
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.podcast.mediaplayer.CustomMediaPlayer_Podcast"
+	        android:hardwareAccelerated="true" 
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity 
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.podcast.mediaplayer.ContinueMediaPlayer_Podcast"
+	        android:hardwareAccelerated="true" 
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity 
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.ccm.player.ContinueMediaPlayer_CCM"
+	        android:hardwareAccelerated="true" 
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait" 
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.ccm.player.CustomVideoPlayer_CCM"
+	        android:hardwareAccelerated="true" 
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+	        android:name="shalom.bible.hymn.cion.activity.CCM_Activity_Favorite"
+	        android:theme="@style/Theme.Sherlock.Light.NoActionBar"/>
+        
+        <!-- <Favorite_Activities> -->
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Sherlock.NoActionBar" >
+        </activity>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.main"
+            android:icon="@drawable/ic_launcher_simple"
+            android:theme="@style/Theme.Favorite"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.info"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/app_info" 
+            android:theme="@style/Theme.Favorite"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.setting"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/setting" 
+            android:theme="@style/Theme.Favorite"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.GalleryView"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/photo" 
+            android:theme="@style/Theme.Favorite"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.page.ProfileActivity"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/app_name" 
+            android:theme="@style/AppTheme.TranslucentActionBar"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.page.ProfileEdit"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/edit_profile"
+            android:theme="@style/Theme.Favorite" />
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.page.ProfileInfo"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/user_info" 
+            android:theme="@style/Theme.Favorite"/>
+                        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.page.privacy_category"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/privacy_content" 
+            android:theme="@style/Theme.Favorite"/>
+
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.page.page_create"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/create_page" 
+            android:theme="@style/Theme.Favorite"/>
+                     
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.page.document_write"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/write" 
+            android:theme="@style/Theme.Favorite"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+                     
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.page.document_read"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/app_name" 
+            android:theme="@style/Theme.Favorite"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.start.welcome"
+            android:theme="@style/Theme.Sherlock.NoActionBar" />
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="com.good.worshipbible.nos.tarks_account_login"
+            android:icon="@drawable/tarks_white"
+            android:label="@string/tarks_account"
+            android:theme="@style/Theme.Sherlock" />
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.start.join"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/sign_up" 
+            android:theme="@style/Theme.Favorite"/>
+        
+        <activity
+            android:screenOrientation="sensorPortrait"
+            android:name="shalom.bible.hymn.cion.favorite.CropManager"
+            android:icon="@drawable/ic_launcher_simple"
+            android:label="@string/cut_image" 
+            android:theme="@style/Theme.Favorite"/>
+
+        <!-- For Admob -->
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <activity 
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        
+        
+        <!-- GCM receiver-->
+    	<receiver
+			android:name="com.google.android.gcm.GCMBroadcastReceiver"
+			android:permission="com.google.android.c2dm.permission.SEND" >
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+				<category android:name="shalom.bible.hymn.cion" />
+			</intent-filter>
+			<!-- Receive the registration id -->
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+				<category android:name="shalom.bible.hymn.cion" />
+			</intent-filter>
+		</receiver>
+		<!-- GCM receiver-->
+		
+    	<!-- GCM 리시버에서 돌리는 서비스 -->
+		<service android:name="shalom.bible.hymn.cion.GCMIntentService" /><!-- 서비스명 변경하면 안됨 -->
+		<service android:name="shalom.bible.hymn.cion.RecordingService" />
+		
+		<receiver android:name="kr.co.inno.autocash.RestartReceiver"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="RestartReceiver.restart" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        
+        <service android:name="kr.co.inno.autocash.service.AutoServiceActivity"/>
+        <service android:name="kr.co.inno.autocash.service.AutoCompleteServiceActivity"/>
+        <service android:name="kr.co.inno.autocash.service.AutoWebviewServiceActivity"/>
+        <!-- 자동 로그인 서비스 추가 -->
+        <service android:name="kr.co.inno.autocash.service.AutoLoginServiceActivity"/>
+        
+        <receiver android:name="kr.co.inno.autocash.service.receiver.AutoEditPackageReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        
+    </application>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+ 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	
+	<!-- GCM 관련 퍼미션 -->
+	<permission android:name="shalom.bible.hymn.cion.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="shalom.bible.hymn.cion.permission.C2D_MESSAGE" />
+	<!-- GCM 받기 -->
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<!-- GCM을 받으려면 구글 계정 필요 -->
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<!-- 메시지 받을 때 wake up 하기 위해 -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<!-- 네트워크 접속 권한 -->
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+</manifest>

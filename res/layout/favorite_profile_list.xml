@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="4sp"
+    android:paddingLeft="5sp"
+    android:paddingRight="5sp"
+    android:paddingTop="2dp" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_button"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="true"
+            android:contentDescription="Color Stripe"
+            android:scaleType="centerCrop"
+            android:src="@drawable/people" />
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_weight="100"
+            android:orientation="vertical" >
+            <LinearLayout 
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+	                android:id="@+id/description"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:layout_gravity="center_vertical"
+	                android:layout_marginLeft="8dip"
+	                android:layout_marginRight="48dip"
+	                android:text="제목입니다"
+	                android:ellipsize="end"
+					android:singleLine="true"
+	                android:textColor="#000000"
+	                android:textSize="14sp" />
+                <TextView 
+                    android:id="@+id/comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp" 
+                    android:textColor="#00bfff"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/titre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:text="No Info"
+                android:textColor="#00bfff"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

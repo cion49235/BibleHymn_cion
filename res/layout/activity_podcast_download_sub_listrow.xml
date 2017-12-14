@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="0.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginRight="3.0dip"
+        android:layout_weight="1.0">
+        <TextView
+            android:id="@+id/txt_sub_downtitle" 
+            android:textSize="@dimen/text_vvs"
+            android:textColor="@color/black_70"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:singleLine="true" />
+        <LinearLayout
+             android:orientation="vertical" 
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content" 
+             android:layout_marginTop="3.0dip"
+             android:layout_marginBottom="1.0dip">
+            <TextView
+                 android:id="@+id/txt_sub_downpubdate"
+                 android:textSize="@dimen/text_s"
+                 android:textColor="@color/black_40"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    
+        <ImageButton
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical" 
+	        android:id="@+id/bt_sub_download_play"
+	        android:background="@android:color/transparent"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:src="@drawable/ic_action_play_over_video"/>
+        
+    	<ImageButton
+	        android:layout_gravity="center_vertical" 
+	        android:id="@+id/bt_sub_download_delete"
+	        android:background="@android:color/transparent"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:src="@drawable/btn_bg_delete"/>    
+    
+</LinearLayout>
