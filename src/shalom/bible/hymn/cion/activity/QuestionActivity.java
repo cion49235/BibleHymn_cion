@@ -240,7 +240,7 @@ public class QuestionActivity extends SherlockActivity implements InterstitialAd
 	
 	public void addInterstitialView() {
     	if(interstialAd == null) {
-        	AdInfo adInfo = new AdInfo("cq61ihae");
+        	AdInfo adInfo = new AdInfo("vuh3q0an");
 //        	adInfo.setTestMode(false);
         	interstialAd = new com.admixer.InterstitialAd(this);
         	interstialAd.setAdInfo(adInfo, this);
