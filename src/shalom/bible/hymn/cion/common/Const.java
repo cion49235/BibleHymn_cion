@@ -20,6 +20,8 @@ public class Const {
 	public static int default_textsize;
 	public static int current_position_bible;
 	public static int current_position_podcast;
+	public static String isSubscribed = "false";
+
 	public static String[] intent_alert_podcast = {
 			BibleHymnApp.getApplication().getString(R.string.frg_podcast_09),
 			BibleHymnApp.getApplication().getString(R.string.frg_podcast_10),

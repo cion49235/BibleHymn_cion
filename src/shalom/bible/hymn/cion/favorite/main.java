@@ -30,8 +30,10 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import shalom.bible.hymn.cion.R;
+import shalom.bible.hymn.cion.common.Const;
 import shalom.bible.hymn.cion.favorite.global.Global;
 import shalom.bible.hymn.cion.favorite.page.ProfileActivity;
+import shalom.bible.hymn.cion.util.PreferenceUtil;
 
 public class main extends SherlockActivity implements AdViewListener {
 
@@ -49,7 +51,9 @@ public class main extends SherlockActivity implements AdViewListener {
         AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMIXER, "vuh3q0an");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB, "ca-app-pub-4637651494513698/7757784963");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
-    	addBannerView();
+    	if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 //    	init_admob_naive();
         setList(context.getString(R.string.community), context.getString(R.string.community_subtitle), 309);
         setListAdapter();

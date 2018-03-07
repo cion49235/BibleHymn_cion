@@ -42,8 +42,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
-import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 import android.webkit.DownloadListener;
 import android.webkit.WebView;
@@ -61,12 +61,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import shalom.bible.hymn.cion.R;
+import shalom.bible.hymn.cion.common.Const;
 import shalom.bible.hymn.cion.favorite.GalleryView;
 import shalom.bible.hymn.cion.favorite.connect.AsyncHttpTask;
 import shalom.bible.hymn.cion.favorite.connect.ImageDownloader;
 import shalom.bible.hymn.cion.favorite.global.Filedw;
 import shalom.bible.hymn.cion.favorite.global.Global;
 import shalom.bible.hymn.cion.favorite.global.Globalvariable;
+import shalom.bible.hymn.cion.util.PreferenceUtil;
 
 public class document_read extends SherlockActivity implements AdViewListener, InterstitialAdListener {
 
@@ -132,7 +134,9 @@ public class document_read extends SherlockActivity implements AdViewListener, I
 		ct = this;
     	
 //    	init_admob_naive();
-		addBannerView();
+		if(!PreferenceUtil.getStringSharedData(ct, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 		// Get Intent
 		Intent intent = getIntent();// 
 		doc_srl = intent.getStringExtra("doc_srl");

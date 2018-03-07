@@ -28,7 +28,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import shalom.bible.hymn.cion.R;
+import shalom.bible.hymn.cion.common.Const;
 import shalom.bible.hymn.cion.db.helper.DBOpenHelper;
+import shalom.bible.hymn.cion.util.PreferenceUtil;
 
 
 public class Fragment_Note_Writer extends SherlockActivity implements OnClickListener, AdViewListener {
@@ -51,7 +53,9 @@ public class Fragment_Note_Writer extends SherlockActivity implements OnClickLis
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB, "ca-app-pub-4637651494513698/7757784963");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
 		context = this;
-		addBannerView();
+		if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 //		init_admob_naive();
 		get_intent_data();
 		init_ui();

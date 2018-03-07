@@ -49,6 +49,8 @@ public class PreferenceUtil {
 	public final static String PREF_AD_VIEW = "ad_view";
 	public final static String PREF_AD_TIME = "ad_time";
 	
+	public final static String PREF_ISSUBSCRIBED = "pref_issubscribed";
+	
 	//==============================================================================================//
 	//================================ 프리퍼런스 저장하고 불러오기 ================================//
 	public static boolean getBooleanSharedData(Context context, String key, boolean defaultData) {

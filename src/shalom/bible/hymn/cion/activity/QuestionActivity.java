@@ -32,6 +32,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import shalom.bible.hymn.cion.R;
+import shalom.bible.hymn.cion.common.Const;
+import shalom.bible.hymn.cion.util.PreferenceUtil;
 import shalom.bible.hymn.cion.util.SimpleCrypto;
 import shalom.bible.hymn.cion.util.Utils;
 
@@ -57,7 +59,9 @@ public class QuestionActivity extends SherlockActivity implements InterstitialAd
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB, "ca-app-pub-4637651494513698/7757784963");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
 //    	init_admob_naive();
-		addBannerView();
+    	if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 		set_titlebar();
 		display_question();
 		exit_handler();

@@ -57,6 +57,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import shalom.bible.hymn.cion.R;
 import shalom.bible.hymn.cion.RecordingService;
+import shalom.bible.hymn.cion.common.Const;
 import shalom.bible.hymn.cion.favorite.GalleryView;
 import shalom.bible.hymn.cion.favorite.connect.AsyncHttpTask;
 import shalom.bible.hymn.cion.favorite.global.Global;
@@ -116,7 +117,9 @@ public class document_write extends SherlockActivity implements AdViewListener, 
 		show_alert = true;
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		setSupportProgressBarIndeterminateVisibility(false);
-		addBannerView();
+		if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+			addBannerView();		
+		}
 //    	init_admob_naive();
 		// Get Intent
 		Intent intent = getIntent();
@@ -149,7 +152,9 @@ public class document_write extends SherlockActivity implements AdViewListener, 
 		super.onDestroy();
 //		admobNative.destroy();
 		show_alert = false;
-		addInterstitialView();
+		if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+			addInterstitialView();
+		}
 	}
 	
 	@Override

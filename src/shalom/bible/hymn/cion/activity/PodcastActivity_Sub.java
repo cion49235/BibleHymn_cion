@@ -58,6 +58,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import shalom.bible.hymn.cion.R;
+import shalom.bible.hymn.cion.common.Const;
 import shalom.bible.hymn.cion.dao.Activity_Data_Podcast_Sub;
 import shalom.bible.hymn.cion.db.helper.DBOpenHelper;
 import shalom.bible.hymn.cion.podcast.mediaplayer.ContinueMediaPlayer_Podcast;
@@ -101,7 +102,9 @@ public class PodcastActivity_Sub extends SherlockActivity implements OnClickList
 		AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMIXER, "vuh3q0an");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB, "ca-app-pub-4637651494513698/7757784963");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
-    	addBannerView();
+    	if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 //    	init_admob_naive();
 		retry_alert = true;
 		title = getIntent().getStringExtra("title");

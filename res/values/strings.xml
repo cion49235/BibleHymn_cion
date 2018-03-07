@@ -925,4 +925,9 @@
     <string name="permission_record_ment">"Mobile settings-App permissions-Storage and Mic-permit"</string>
     <string name="toast_bookmark_on">Add bookmark</string>
     <string name="toast_bookmark_off">Del bookmark</string>
+    
+    <string name="txt_inapp_alert_ment">"Would you like to use a version that does not have all the ads in the Bible app?\n※Billing charges at checkout"</string>
+    <string name="txt_inapp_alert_title">"Remove Ads"</string>
+    <string name="txt_inapp_alert_yes">"Remove Ads"</string>
+    <string name="txt_inapp_alert_no">"Ignore"</string>
 </resources>

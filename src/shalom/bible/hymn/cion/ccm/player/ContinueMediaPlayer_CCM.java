@@ -52,7 +52,9 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import shalom.bible.hymn.cion.R;
+import shalom.bible.hymn.cion.common.Const;
 import shalom.bible.hymn.cion.util.NotificationUtil;
+import shalom.bible.hymn.cion.util.PreferenceUtil;
 import shalom.bible.hymn.cion.util.StringUtil;
 import shalom.bible.hymn.cion.util.TimeUtil;
 
@@ -87,7 +89,9 @@ public class ContinueMediaPlayer_CCM extends SherlockActivity implements OnClick
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB, "ca-app-pub-4637651494513698/7757784963");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
 		context = this;
-		addBannerView();
+		if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 //		init_admob_naive();
 		init_ui();
 		telephony_manager();
@@ -568,8 +572,13 @@ public class ContinueMediaPlayer_CCM extends SherlockActivity implements OnClick
 				video_sequence_start(video_num);
 			}
 		}else if(view == btn_media_continue){
-			Toast.makeText(context, context.getString(R.string.activity_podcast_12), Toast.LENGTH_LONG).show();
-			addInterstitialView();
+			if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+				Toast.makeText(context, context.getString(R.string.activity_podcast_12), Toast.LENGTH_LONG).show();
+				addInterstitialView();				
+			}else {
+				Toast.makeText(context, context.getString(R.string.activity_podcast_12), Toast.LENGTH_LONG).show();
+				home_action();
+			}
 		}
 	}
 	
@@ -579,8 +588,10 @@ public class ContinueMediaPlayer_CCM extends SherlockActivity implements OnClick
 			if(mediaPlayer.isPlaying() == true){
 				mediaPlayer.pause();
 			}
-			Toast.makeText(context, context.getString(R.string.txt_after_ad), Toast.LENGTH_SHORT).show();
-			addInterstitialView();
+			if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+				Toast.makeText(context, context.getString(R.string.txt_after_ad), Toast.LENGTH_SHORT).show();
+				addInterstitialView();				
+			}
 			 handler.postDelayed(new Runnable() {
 				 @Override
 				 public void run() {

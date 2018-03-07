@@ -46,9 +46,11 @@ import android.widget.Toast;
 import shalom.bible.hymn.cion.R;
 import shalom.bible.hymn.cion.ccm.player.ContinueMediaPlayer_CCM;
 import shalom.bible.hymn.cion.ccm.player.CustomVideoPlayer_CCM;
+import shalom.bible.hymn.cion.common.Const;
 import shalom.bible.hymn.cion.dao.Activity_Data_CCM_Favorite;
 import shalom.bible.hymn.cion.db.helper.DBOpenHelper;
 import shalom.bible.hymn.cion.util.AlertUtil;
+import shalom.bible.hymn.cion.util.PreferenceUtil;
 import shalom.bible.hymn.cion.util.RoundedTransform;
 
 public class CCM_Activity_Favorite extends SherlockActivity implements OnClickListener,OnItemClickListener, OnScrollListener, AdViewListener {
@@ -72,7 +74,9 @@ public class CCM_Activity_Favorite extends SherlockActivity implements OnClickLi
 		AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMIXER, "vuh3q0an");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB, "ca-app-pub-4637651494513698/7757784963");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
-    	addBannerView();
+    	if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 //    	init_admob_naive();
 		init_ui();
 		set_titlebar();

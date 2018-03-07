@@ -31,9 +31,10 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import shalom.bible.hymn.cion.R;
+import shalom.bible.hymn.cion.common.Const;
 import shalom.bible.hymn.cion.util.Crypto;
+import shalom.bible.hymn.cion.util.PreferenceUtil;
 import shalom.bible.hymn.cion.util.Utils;
 
 public class DictionaryViewActivity extends SherlockActivity implements InterstitialAdListener, OnClickListener, AdViewListener {
@@ -56,7 +57,9 @@ public class DictionaryViewActivity extends SherlockActivity implements Intersti
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
 		retry_alert = true;
 //		init_admob_naive();
-		addBannerView();
+		if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 		set_titlebar();
 		display_list();
 	}

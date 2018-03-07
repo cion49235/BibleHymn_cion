@@ -358,8 +358,10 @@ public class Fragment_OldBible extends Fragment implements OnClickListener, OnIt
 						}else if(which == 6){//문의하기
 							((MainFragmentActivity)getActivity()).intent_question_webview();
 						}else if(which == 7){//후원하기
-							addInterstitialView();
-							Toast.makeText(getActivity(), getActivity().getString(R.string.toast_ad), Toast.LENGTH_LONG).show();
+							if(!PreferenceUtil.getStringSharedData(getActivity(), PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+								addInterstitialView();
+								Toast.makeText(getActivity(), getActivity().getString(R.string.toast_ad), Toast.LENGTH_LONG).show();	
+							}
 						}else if(which == 8){//이앱전도
 							((MainFragmentActivity)getActivity()).intent_app_share();
 						}else if(which == 9){//Swipe Mode
@@ -388,8 +390,10 @@ public class Fragment_OldBible extends Fragment implements OnClickListener, OnIt
 						}else if(which == 5){
 							((MainFragmentActivity)getActivity()).intent_question_webview();
 						}else if(which == 6){
-							addInterstitialView();
-							Toast.makeText(getActivity(), getActivity().getString(R.string.toast_ad), Toast.LENGTH_LONG).show();
+							if(!PreferenceUtil.getStringSharedData(getActivity(), PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+								addInterstitialView();
+								Toast.makeText(getActivity(), getActivity().getString(R.string.toast_ad), Toast.LENGTH_LONG).show();								
+							}
 						}else if(which == 7){
 							((MainFragmentActivity)getActivity()).intent_app_share();
 						}else if(which == 8){

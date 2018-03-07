@@ -92,7 +92,9 @@ public class HymnViewActivity extends Activity implements AdViewListener, OnClic
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB, "ca-app-pub-4637651494513698/7757784963");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
 		context = this;
-		addBannerView();
+		if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 //		init_admob_naive();
 		init_ui();
 		telephony_manager();
@@ -508,9 +510,13 @@ public class HymnViewActivity extends Activity implements AdViewListener, OnClic
 			}
 		}else if(view == bt_hymn_background){
 			if(mediaPlayer != null && mediaPlayer.isPlaying() ){
-				action_background = true;
-				Toast.makeText(context, context.getString(R.string.txt_background_play), Toast.LENGTH_LONG).show();
-				addInterstitialView();
+				if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+					action_background = true;
+					Toast.makeText(context, context.getString(R.string.txt_background_play), Toast.LENGTH_LONG).show();
+					addInterstitialView();					
+				}else {
+					home_action();
+				}
 			}
 		}else{
 			return;
@@ -582,18 +588,31 @@ public class HymnViewActivity extends Activity implements AdViewListener, OnClic
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if(event.getKeyCode() == KeyEvent.KEYCODE_BACK){
-			Toast.makeText(context, context.getString(R.string.txt_after_ad), Toast.LENGTH_LONG).show();
-			mediaplayer_stop();
-			addInterstitialView();
-			NotificationUtil.setNotification_Cancel();
-			 handler.postDelayed(new Runnable() {
-				 @Override
-				 public void run() {
-					 mediaplayer_stop();
-					 onDestroy();
-				 }
-			 },2000);
-			return false;
+			if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+				Toast.makeText(context, context.getString(R.string.txt_after_ad), Toast.LENGTH_LONG).show();
+				mediaplayer_stop();
+				addInterstitialView();
+				NotificationUtil.setNotification_Cancel();
+				 handler.postDelayed(new Runnable() {
+					 @Override
+					 public void run() {
+						 mediaplayer_stop();
+						 onDestroy();
+					 }
+				 },2000);
+				return false;
+			}else {
+				mediaplayer_stop();
+				NotificationUtil.setNotification_Cancel();
+				 handler.postDelayed(new Runnable() {
+					 @Override
+					 public void run() {
+						 mediaplayer_stop();
+						 onDestroy();
+					 }
+				 },500);
+				return false;
+			}
 		}
 		return super.onKeyDown(keyCode, event);
 	}

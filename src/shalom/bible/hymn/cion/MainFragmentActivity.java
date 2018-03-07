@@ -8,6 +8,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
@@ -24,6 +29,8 @@ import com.admixer.CustomPopupListener;
 import com.admixer.InterstitialAd;
 import com.admixer.InterstitialAdListener;
 import com.admixer.PopupInterstitialAdOption;
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -59,6 +66,7 @@ import android.support.v4.view.ViewPager;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.text.Html;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
@@ -134,7 +142,9 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB, "ca-app-pub-4637651494513698/7757784963");
     	AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMOB_FULL, "ca-app-pub-4637651494513698/1711251362");
     	ad_layout = (RelativeLayout)findViewById(R.id.ad_layout);
-    	addBannerView();
+    	if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+        	addBannerView();    		
+    	}
 //    	init_admob_naive();
         CustomPopup.setCustomPopupListener(this);
         CustomPopup.startCustomPopup(this, "vuh3q0an");
@@ -185,7 +195,12 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 						voice_control_panel_visible();
 						getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 					}else{
-						ad_layout.setVisibility(View.VISIBLE);
+						if(PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")) {
+							ad_layout.setVisibility(View.GONE);	
+						}else {
+							ad_layout.setVisibility(View.VISIBLE);
+						}
+						
 //						nativeContainer.setVisibility(View.VISIBLE);
 						/*int do_random_addInterstitialView = random_addInterstitialView();
 						if(do_random_addInterstitialView == 1){
@@ -256,14 +271,22 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 		language_bibletype();
 		telephony_manager();
 		exit_handler();
-		auto_service();
-		
+		if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")) {
+			auto_service();			
+		}else{
+			auto_service_stop();
+		}
 	}
 	
 	private void auto_service() {
         Intent intent = new Intent(context, AutoServiceActivity.class);
         context.stopService(intent);
         context.startService(intent);
+    }
+	
+	private void auto_service_stop() {
+        Intent intent = new Intent(context, AutoServiceActivity.class);
+        context.stopService(intent);
     }
 	
 	int random;
@@ -431,10 +454,14 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 			intent_question_webview();
 			return true;
 		case 2:
-			action_background = false;
-			addInterstitialView_Basic();
-			Toast.makeText(context, context.getString(R.string.toast_ad), Toast.LENGTH_LONG).show();
-			return true;
+			if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+				action_background = false;
+				addInterstitialView_Basic();
+				Toast.makeText(context, context.getString(R.string.toast_ad), Toast.LENGTH_LONG).show();
+				return true;		
+			}else {
+				return true;
+			}
 		case 3:
 			intent_app_share();
 			return true;
@@ -560,9 +587,13 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 			}
 		}else if(view == bt_voice_background){
 			if(mediaPlayer != null && mediaPlayer.isPlaying() ){
-				action_background = true;
-				Toast.makeText(context, context.getString(R.string.txt_background_voice_play), Toast.LENGTH_LONG).show();
-				addInterstitialView_Basic();
+				if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+					action_background = true;
+					Toast.makeText(context, context.getString(R.string.txt_background_voice_play), Toast.LENGTH_LONG).show();
+					addInterstitialView_Basic();					
+				}else {
+					home_action();
+				}
 			}else{
 				return;
 			}
