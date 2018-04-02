@@ -50,7 +50,7 @@ public class IntroActivity extends Activity{
         setContentView(R.layout.activity_intro);
         context = this;
         retry_alert = true;
-//        billing_process();//인앱정기결제체크
+        billing_process();//인앱정기결제체크
         String kkk_path = context.getString(R.string.txt_kkk_path);
         String kbb_path = context.getString(R.string.txt_kbb_path);
     	String kjv_path = context.getString(R.string.txt_kjv_path);
