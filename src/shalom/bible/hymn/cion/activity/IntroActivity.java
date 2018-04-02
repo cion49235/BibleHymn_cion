@@ -50,7 +50,7 @@ public class IntroActivity extends Activity{
         setContentView(R.layout.activity_intro);
         context = this;
         retry_alert = true;
-        billing_process();//인앱정기결제체크
+//        billing_process();//인앱정기결제체크
         String kkk_path = context.getString(R.string.txt_kkk_path);
         String kbb_path = context.getString(R.string.txt_kbb_path);
     	String kjv_path = context.getString(R.string.txt_kjv_path);
@@ -434,15 +434,19 @@ public class IntroActivity extends Activity{
     Runnable runnable = new Runnable() {
 		@Override
 		public void run() {
-			if(PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")) {
+			/*if(PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")) {
 				Intent intent = new Intent(context, MainFragmentActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
 				finish();
 			}else {
 				show_inapp_alert();	
-			}
+			}*/
 			//fade_animation
+			Intent intent = new Intent(context, MainFragmentActivity.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
+			finish();
 			overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 		}
 	};
