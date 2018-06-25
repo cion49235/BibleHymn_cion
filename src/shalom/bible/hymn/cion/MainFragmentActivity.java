@@ -79,6 +79,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import kr.co.inno.autocash.service.AutoServiceActivity;
+import shalom.bible.hymn.cion.activity.IntroActivity;
 import shalom.bible.hymn.cion.activity.QuestionActivity;
 import shalom.bible.hymn.cion.activity.SearchActivity;
 import shalom.bible.hymn.cion.colorpicker.AmbilWarnaDialog;
@@ -136,6 +137,7 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 		super.onCreate(savedInstanceState);
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 		setContentView(R.layout.fragment_main);
+		billing_process();//인앱정기결제체크
 		context = this;
 		retry_alert = true;
 		AdMixerManager.getInstance().setAdapterDefaultAppCode(AdAdapter.ADAPTER_ADMIXER, "vuh3q0an");
@@ -277,6 +279,53 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 			auto_service_stop();
 		}
 	}
+	
+	private BillingProcessor bp;
+    private static final String SUBSCRIPTION_ID = "shalom.bible.inapp.month2";
+    private static final String LICENSE_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl1DAeeusKNt1zvOBj9CPo8UP6HPjcQa8Zs9QrM+mHaKh/KtZiwg2QDrTHjGSlwo+ubhXAW0m6kAqCSO5zStIkwtjXCsBvkDk2Xt0w8Oq9+3w7cncyhOOXd6XjasLeYLeY2+Is//+/W8H8EkTrUJOIA7tK2F6QSzndhl1urE5iSSUvh6m4nV34hR7iY/wNt0oLTEZAQDceZPrREH/4DVQtUmvtZRr6QTb7iVH9c41LLO1EdeeGmTNrIHCtwh5SZnOHz2N4ypPDu10po81xGQbdd5DjdTnzaHfrdzhIPEyilaaz2h+QYw5JVnzAdB6Ax868nIvdr4tHAheFg2KEq1OtwIDAQAB";
+    private void billing_process(){
+        if(!BillingProcessor.isIabServiceAvailable(this)) {
+        }
+        bp = new BillingProcessor(this, LICENSE_KEY, new BillingProcessor.IBillingHandler() {
+            @Override
+            public void onBillingInitialized() {
+                try{
+                    bp.loadOwnedPurchasesFromGoogle();
+                    Log.i("dsu", "isSubscriptionUpdateSupported : " + bp.isSubscriptionUpdateSupported());
+                    Log.i("dsu", "getSubscriptionTransactionDetails : " + bp.getSubscriptionTransactionDetails(SUBSCRIPTION_ID));
+                    Log.i("dsu", "isSubscribed : " + bp.isSubscribed(SUBSCRIPTION_ID));
+                    Log.i("dsu", "autoRenewing : " + bp.getSubscriptionTransactionDetails(SUBSCRIPTION_ID).purchaseInfo.purchaseData.autoRenewing);
+                    Log.i("dsu", "purchaseTime : " + bp.getSubscriptionTransactionDetails(SUBSCRIPTION_ID).purchaseInfo.purchaseData.purchaseTime);
+                    Log.i("dsu", "purchaseState : " + bp.getSubscriptionTransactionDetails(SUBSCRIPTION_ID).purchaseInfo.purchaseData.purchaseState);
+                    PreferenceUtil.setStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Boolean.toString(bp.getSubscriptionTransactionDetails(SUBSCRIPTION_ID).purchaseInfo.purchaseData.autoRenewing));
+                }catch (NullPointerException e){
+                }
+            }
+            
+            @Override
+            public void onPurchaseHistoryRestored() {
+//            	showToast("onPurchaseHistoryRestored");
+                for(String sku : bp.listOwnedProducts()){
+                    Log.i("dsu", "Owned Managed Product: " + sku);
+//                    showToast("Owned Managed Product: " + sku);
+                }
+                for(String sku : bp.listOwnedSubscriptions()){
+                    Log.i("dsu", "Owned Subscription: " + sku);
+//                    showToast("Owned Subscription : " + sku);
+                }
+            }
+
+			@Override
+			public void onProductPurchased(String arg0, TransactionDetails arg1) {
+				// TODO Auto-generated method stub
+				
+			}
+			@Override
+			public void onBillingError(int arg0, Throwable arg1) {
+
+			}
+        });
+    }
 	
 	private void auto_service() {
         Intent intent = new Intent(context, AutoServiceActivity.class);
@@ -424,9 +473,15 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 		menu.add(0, 1, 0, context.getString(R.string.txt_setting_alert6))
 		.setIcon(R.drawable.ic_action_contact_us)
 		.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-		menu.add(0, 2, 0, context.getString(R.string.txt_setting_alert7))
-		.setIcon(R.drawable.ic_action_ad)
-		.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+		if(Utils.language(context).equals("ko_KR")){
+			menu.add(0, 2, 0, context.getString(R.string.txt_setting_alert7))
+			.setIcon(R.drawable.ic_action_ad)
+			.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+		}else {
+			menu.add(0, 2, 0, context.getString(R.string.txt_setting_alert7))
+			.setIcon(R.drawable.ic_action_ad_en)
+			.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+		}
 		menu.add(0, 3, 0, context.getString(R.string.txt_setting_alert8))
 		.setIcon(R.drawable.ic_action_share)
 		.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
@@ -439,9 +494,29 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 		menu.add(0, 6, 0, context.getString(R.string.txt_setting_alert11))
 		.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 		return true;  
-	}  
-
-
+	}
+	
+	private void show_inapp_alert() {
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setCancelable(false);
+		builder.setTitle(context.getString(R.string.txt_inapp_alert_title));
+		builder.setMessage(context.getString(R.string.txt_inapp_alert_ment));
+		builder.setInverseBackgroundForced(true);
+		builder.setNeutralButton(context.getString(R.string.txt_inapp_alert_yes), new DialogInterface.OnClickListener(){
+			public void onClick(DialogInterface dialog, int whichButton){
+				bp.subscribe(MainFragmentActivity.this,SUBSCRIPTION_ID);
+			}
+		});
+		builder.setNegativeButton(context.getString(R.string.txt_inapp_alert_no), new DialogInterface.OnClickListener(){
+			public void onClick(DialogInterface dialog, int whichButton){
+             	dialog.dismiss();
+			}
+		});
+		AlertDialog myAlertDialog = builder.create();
+		if(retry_alert) myAlertDialog.show();
+    }
+	
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -454,14 +529,16 @@ public class MainFragmentActivity extends SherlockFragmentActivity implements an
 			intent_question_webview();
 			return true;
 		case 2:
-			if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
+			/*if(!PreferenceUtil.getStringSharedData(context, PreferenceUtil.PREF_ISSUBSCRIBED, Const.isSubscribed).equals("true")){
 				action_background = false;
 				addInterstitialView_Basic();
 				Toast.makeText(context, context.getString(R.string.toast_ad), Toast.LENGTH_LONG).show();
 				return true;		
 			}else {
 				return true;
-			}
+			}*/
+			show_inapp_alert();
+			return true;
 		case 3:
 			intent_app_share();
 			return true;
